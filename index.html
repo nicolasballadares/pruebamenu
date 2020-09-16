@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="http://images.engage.es-pt.thomsonreuters.com/EloquaImages/clients/LALEYSAEIMPRESORA/%7B1273b8ce-6a35-479d-80c2-76035afbf179%7D_thomsonreuters.png" />
+    <style>
+        /* RESET */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;	padding: 0;	border: 0;	font-size: 100%; font: inherit; vertical-align: baseline;}
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+        body {line-height: 1;}
+        html {scroll-behavior: smooth;}
+        ol, ul {list-style: none;}
+        blockquote, q {quotes: none;}
+        blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+        table { border-collapse: collapse; border-spacing: 0;}
+
+        /* ESTILOS */
+        body {margin: 0; padding: 0; font-family: "Knowledge", Arial, Helvetica, sans-serif; 
+        background: #EBEBDB;
+        /* background: linear-gradient(225deg, rgba(58,68,63,.25) 0%, rgba(255, 255, 255,.5) 100%);  */
+        border-bottom: solid 2rem; border-color: #575756;}
+        nav {position: fixed; width: 100%;  text-align: justify; display: flex; flex-wrap: wrap; margin-top: 0; z-index: 999; }
+        section { max-width: 1545px; margin: auto; padding: 1rem;}
+        footer { display: flex; align-items: center; justify-content: center; margin-bottom: 2rem;}
+        .navbar { display: flex; flex-direction: column; align-items: left; justify-items: stretch;}
+        .principal { 
+            background: #EBEBDB;
+            display: flex; flex-direction: row; flex-wrap: nowrap; justify-items: stretch; }
+        .logo { background-color: #EC6608; padding: .5rem; display: flex; align-items: center; justify-content: center; }
+        .encabezado {color: #575756; line-height: 1.7rem; text-transform: uppercase; padding: 1rem; }
+        .links {background-color: #575756; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);}
+        .hamb {display: flex; align-items: center; justify-content: flex-end; }
+        .topnav {display: flex; flex-wrap: wrap; align-items: center; text-align: left; padding-top: .5rem ; padding-bottom: .5rem;}
+        #primario {background-color: #EC6608; color: rgb(255, 255, 255); display: flex; flex-wrap: wrap;} 
+        #secundario {padding: .5rem; text-decoration: none;}
+        .continuar {display: flex; flex-direction: row; flex-wrap: wrap; justify-items: center; text-align: center;}
+        .continuar div {margin: auto; margin-top: 1rem; margin-bottom: 1rem; line-height: 1.3rem;}
+        .continuar p {color: #575756;}
+        .continuar a {text-decoration: none; color: #EC6608; }
+        .contacto {color: #EC6608; font-weight: bold; text-transform: uppercase; margin-bottom: .5rem;}
+        #abstract {background-color: rgb(255, 255, 255); padding: 1rem; margin-top: 10rem; border-top: solid .25rem; border-bottom: solid .25rem; border-color: #575756;}
+        #abstract .IG_Autor { text-align: center; margin-top: 2rem;}
+        #abstract .IG_Capitulo {font-size: 1.2rem; margin-bottom: 2rem;}
+        #abstract .IG_CapituloNumero {margin-top: 1rem;}
+        #container { background-color: #FFF; padding: 1rem; border-top: solid .25rem; border-bottom: solid .25rem; border-color: #EC6608; }
+        #indice {padding-top: 12rem; }
+        #indice a {margin-bottom: 0;}
+        #info {text-decoration: none; }
+        #info svg {margin: .05rem}
+        .menu {text-align: right; }
+        .titulo {display: flex; flex-direction: row; align-items: center;}
+        .titulo .IG_Capitulo {margin-left: 1rem; font-size: 1.4rem; text-transform: uppercase; color: #575756; }
+        #inicio {background-color: #575756; color: #FFF;}
+        #inicio:hover {background-color: #EC6608; }
+
+        /* ENCABEZADO */
+        #Coleccion {font-family: 'Knowledge', Arial, Helvetica, sans-serif; color: #575756; font-size: 1rem; text-align: left; font-weight: lighter;}
+        #Titulo {font-family: 'Knowledge', Arial, Helvetica, sans-serif; color: #575756; font-size: 1.2rem; line-height: 1.8rem; text-align: left; font-weight: normal; padding-right: 3rem;}
+        #Autor {font-family: 'Knowledge', Arial, Helvetica, sans-serif; color: #FFF; font-size: 1rem; line-height: 1rem; text-align: left; margin-left: 1rem; margin-top: .5rem; margin-bottom: .5rem; padding-left: 3.55rem; font-weight: lighter; }
+        
+        /* ESTILOS DE PÁRRAFO */
+        .IG_IndiceGeneral { color: #EC6608; font-weight: bold; text-transform: uppercase; font-size: 1.5rem; margin-top: 1rem; margin-bottom: 2rem; text-align: center; }
+        .IG_IndiceGeneral a {color: #EC6608; text-decoration: none;}
+        .IG_CapituloNumero { color:  #EC6608; font-weight: bold; text-transform: uppercase; font-size: 1.5rem; line-height: 1.8rem; margin-top: 2rem; margin-bottom: 1rem;}
+        .IG_Capitulo { color:  #575756; font-weight: bold; text-transform: uppercase; margin-top: 2rem; margin-bottom: .5rem;}
+        .IG_Seccion { color:  #EC6608; font-weight: bold; margin-bottom: 1rem; margin-top: 2rem; font-size: 1.2rem; }
+        .IG_Tomo { color: #FFF; font-weight: bold; text-transform: uppercase; text-align: center; font-size: 1.2rem; margin-top: 2rem; margin-bottom: 1rem; margin-top: 2rem; padding: 1rem; background-color: #575756; }
+        .IG_Autor {font-style: italic; color:  #575756; margin-bottom: 1.5rem; margin-top: .5rem; margin-left: 2rem;}
+        .IG_Texto {line-height: 1.1rem; margin-bottom: 1rem; text-indent: 1rem;}
+        .IG_Lugar {margin-top: 2rem; }
+        .IG_QR { color:  #575756; margin-left: 0; margin-bottom: .5rem;}    
+        .IG_1 {  font-weight: bold; color:  #575756; margin-left: 0; margin-bottom: .5rem; margin-top: 1rem; line-height: 1.3rem;}
+        .IG_2 { font-style: normal; color:  #575756; margin-left: 2rem; margin-bottom: .4rem; }
+        .IG_3 { color:  #575756; margin-left: 4rem; margin-bottom: .4rem;}
+        .IG_4 { color:  #575756; margin-left: 6rem; margin-bottom: .4rem;}
+        .IG_5 { color:  #575756; margin-left: 6rem; margin-bottom: .4rem;}
+        
+        /* ESTILOS DE CARACTER */
+        .TextoI { font-style: italic;}
+        .TextoB { font-weight: bold;}
+        .TextoBI { font-weight: bold; font-style: italic;}
+        .TextoV { font-variant: small-caps;}
+        .TextoR { font-style: normal;}
+
+        /* SVG */
+        svg:hover {fill:  #EC6608;}
+
+        /* DESPLEGABLE */
+        .colapsable {background-color: #575756; color: #FFF; cursor: pointer; padding: .5rem; width: 50px; height: 50px; border: none; outline: none; font-size: 26px; position: relative; top: -3.15em; left: -.5em;  }
+        .active, .colapsable:hover {background-color: #EC6608; }
+        .colapsable:after { content: "\2630";  color: white; position: relative; top: -0.05em;  }
+        .active:after {content: "\2807"; position: relative; right: -0.135em; top: -0.05em;  }
+        .content {padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.2s ease-out; text-align: right; vertical-align: top; position: relative; top: -4.15em; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);  }
+        .content div {padding: 1rem; background-color: #FFF; text-align: center; }
+        .content a {color: #575756; text-decoration: none;}
+        .content div:hover {background-color: #EC6608; color: #FFF; }
+
+        /* MEDIA QUERY */
+
+        @media only screen and (min-width: 1200px) {
+            #Autor {padding-left: 3.55rem;}
+        }
+
+        @media only screen and (max-width: 1200px) {
+            footer {display: none;}
+        }
+
+        @media only screen and (max-width: 800px) {
+            #prologo {display: none;}
+            #info {display: block;}
+            #indice { flex-direction: column;}
+        }
+
+        @media screen and (min-width: 800px){
+            #prologo {display: block;}
+            #info {display: none;}
+        }
+
+        @media only screen and (max-width: 550px) {
+            .logo {display: none;}
+            .continuar {flex-direction: column; }
+            #Coleccion {display: none;}
+            /* #Titulo {font-size: 6vw; line-height: 8vw;} */
+            #Autor {padding-left: 0rem;}
+            /* #primario {font-size: 4vw;} */
+        }
+
+        /* ANIMACION */
+        .roll {border-radius: 50%; animation: roll 8s infinite; }
+        .blob {margin: .5rem; border-radius: 50%;  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1); transform: scale(1); animation: pulse 2s infinite; }
+        .icon {box-shadow: 0 0 0 0 rgba(0, 0, 0, .5); transform: scale(1); animation: palette 2s infinite;}
+
+        @keyframes pulse {
+        	0% {transform: scale(1); background-color: #575756; color: rgb(255, 255, 255);	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.75);}        
+        	25% {transform: scale(1); background-color: #EC6608; color: rgb(255, 255, 255); box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);}        
+        	100% {transform: scale(1); background-color: #575756; color: rgb(255, 255, 255); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.75);}
+        }
+
+        @keyframes roll {
+        	0% {transform: rotate(0deg); }        
+        	25% {transform: rotate(360deg); }
+        }
+
+        @keyframes palette {
+        	0% {border-color: #575756; }        
+        	70% {border-color: #EC6608;  }        
+        	100% {border-color: #575756; }
+        }
+
+    </style>
+    <title>Curso sobre Derecho y Código Tributario </title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="principal" >          
+            <div class="logo">
+                 <a href="http://www.thomsonreuters.cl/PortalLN/carro_new/nw_Home.asp?tm=2" target="_blank" >
+            <svg class="roll" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000" width="40" height="40" xml:space="preserve">
+                <path fill="#FFF" d="M811.097,638.99c-9.763,10.419-26.145,10.844-36.644,1.129c-10.398-9.951-10.817-26.252-1.054-36.623 c9.769-10.419,26.15-10.919,36.752-1.075C820.441,612.216,820.967,628.592,811.097,638.99 M698.717,689.946 c-7.93-7.247-20.107-6.882-27.301,0.812c-7.403,7.796-7.091,19.951,0.731,27.301c7.93,7.43,20.059,6.984,27.354-0.812 C706.749,709.445,706.432,697.268,698.717,689.946 M1371.721,1166.953c-9.871,10.398-9.349,26.881,1.048,36.752 c10.5,9.871,26.983,9.344,36.854-1.258c9.661-10.29,9.242-26.779-1.156-36.65 C1397.866,1156.136,1381.587,1156.561,1371.721,1166.953 M1300.314,1283.194c-7.242,7.77-6.93,19.951,0.844,27.301 c7.871,7.246,19.946,6.931,27.193-0.945c7.457-7.665,7.14-19.951-0.737-27.091 C1320.056,1275.004,1307.663,1275.319,1300.314,1283.194 M628.207,833.379c9.661-10.371,9.236-26.72-1.21-36.489 c-10.344-9.946-26.774-9.317-36.596,0.892c-9.871,10.398-9.344,26.725,1.156,36.671 C601.901,844.196,618.283,843.749,628.207,833.379 M1189.638,1397.965c10.607,9.87,26.989,9.345,36.752-1.051 c9.769-10.29,9.349-26.671-1.156-36.541c-10.392-9.871-26.774-9.45-36.645,1.05 C1178.827,1371.819,1179.348,1388.199,1189.638,1397.965 M738.039,797.782c-10.602-2.887-21.838,3.07-25.096,13.833 c-3.15,10.58,3.048,21.817,13.758,24.887c10.709,3.177,21.817-2.914,24.967-13.597C755.028,812.25,748.727,801.062,738.039,797.782  M693.201,894.469c-7.978-2.366-16.274,2.253-18.586,10.21c-2.414,8.059,2.048,16.484,10.134,18.876 c8.032,2.306,16.381-2.392,18.747-10.344C705.803,905.205,701.287,896.883,693.201,894.469 M1304.62,985.376 c-3.253,10.602,2.833,21.946,13.758,25.043c10.71,3.204,21.838-2.941,24.989-13.704c3.048-10.607-2.833-21.892-13.65-25.096 C1319.007,968.575,1307.561,974.666,1304.62,985.376 M1296.325,1087.466c-2.102,7.876,2.312,16.381,10.188,18.693 c8.086,2.307,16.484-2.21,18.795-10.295c2.414-7.978-2.204-16.376-10.29-18.795 C1307.244,1074.864,1298.739,1079.38,1296.325,1087.466 M695.303,1015.144c3.204-10.661-2.887-21.892-13.65-25.096 c-10.709-3.204-21.838,3.097-25.198,13.704c-3.258,10.656,3.043,21.736,13.752,25.016 C680.868,1031.918,692.05,1025.907,695.303,1015.144 M1261.777,1202.55c10.817,3.258,22.156-2.941,25.204-13.65 c3.043-10.607-3.048-21.946-13.758-25.096c-10.602-3.15-21.946,3.048-24.989,13.65 C1244.976,1188.27,1251.175,1199.609,1261.777,1202.55 M758.49,1026.117c-8.925,4.962-12.392,16.408-7.457,25.435 c4.935,9.242,16.381,12.392,25.306,7.349c9.032-4.618,12.812-16.166,7.564-25.198 C778.861,1024.644,767.732,1021.182,758.49,1026.117 M784.635,1098.702c-7.661,3.882-10.392,13.441-6.301,21.209 c4.097,7.457,13.441,10.398,21.215,6.301c7.559-4.306,10.392-13.758,6.193-21.317 C801.645,1097.438,792.199,1094.503,784.635,1098.702 M1146.483,837.948c4.828,9.032,16.172,12.365,25.516,7.688 c9.134-5.118,12.602-16.457,7.667-25.537c-5.043-9.086-16.274-12.575-25.414-7.591 C1144.908,817.632,1141.655,828.863,1146.483,837.948 M1194.155,895.254c4.097,7.586,13.65,10.344,21,6.247 c7.667-4.043,10.505-13.333,6.408-20.973c-4.199-7.747-13.441-10.527-21.209-6.667 C1193.106,878.114,1190.058,887.851,1194.155,895.254 M853.311,1162.125c-4.833-8.925-16.172-12.285-25.306-7.457 c-9.032,4.726-12.494,16.274-7.564,25.198c4.833,9.14,16.172,12.5,25.311,7.457C854.779,1182.598,858.246,1171.26,853.311,1162.125  M1241.095,974.242c9.344-5.355,12.806-16.693,7.978-25.618c-5.037-9.215-16.381-12.494-25.306-7.613 c-9.242,4.882-12.704,16.43-7.667,25.462C1220.724,975.505,1232.38,978.919,1241.095,974.242 M1032.657,270.974 c0-18.166-14.699-32.736-32.763-32.736c-18.059,0-32.865,14.57-32.865,32.736c0,18.113,14.806,32.736,32.865,32.736 C1017.959,303.71,1032.657,289.087,1032.657,270.974 M999.894,1696.704c-18.059,0-32.865,14.596-32.865,32.761 c0,18.166,14.806,32.762,32.865,32.762c18.064,0,32.763-14.596,32.763-32.762C1032.657,1711.299,1017.959,1696.704,999.894,1696.704  M1179.456,1670.662c-18.693,5.04-29.93,24.256-24.887,43.052c5.037,18.796,24.467,29.821,43.053,24.886 c18.898-5.04,30.032-24.256,24.989-43.157C1217.573,1676.753,1198.251,1665.622,1179.456,1670.662 M820.231,1670.662 c-18.688-5.04-38.01,6.09-43.155,24.886c-5.038,18.796,6.193,38.012,24.887,43.052c18.795,4.935,38.118-6.09,43.263-24.886 C850.161,1694.918,839.032,1675.703,820.231,1670.662 M1222.611,304.942c5.043-18.795-6.193-38.064-24.989-43.053 c-18.693-5.011-37.908,5.962-43.053,24.838c-5.043,18.871,6.193,38.064,24.887,43.048 C1198.251,334.844,1217.573,323.764,1222.611,304.942 M845.225,286.673c-5.145-18.876-24.467-29.849-43.263-24.785 c-18.693,4.989-29.924,24.177-24.887,42.999c5.043,18.876,24.467,29.956,43.155,24.887 C839.032,324.791,850.161,305.544,845.225,286.673 M797.973,467.304c-5.672-13.097-20.79-18.978-33.709-13.387 c-12.914,5.591-19.005,20.607-13.333,33.655c5.564,12.968,20.682,18.924,33.602,13.333 C797.446,495.266,803.538,480.272,797.973,467.304 M1215.262,1499.609c-13.021,5.566-19.005,20.581-13.441,33.497 c5.672,13.126,20.688,19.006,33.709,13.441c13.016-5.566,19.005-20.581,13.333-33.602 C1243.299,1499.924,1228.175,1493.939,1215.262,1499.609 M1335.91,1425.266c-11.865,9.555-13.86,26.776-4.51,38.642 c9.446,11.97,26.774,13.86,38.537,4.515c11.968-9.45,14.07-26.566,4.618-38.642 C1365.211,1418.021,1347.883,1415.921,1335.91,1425.266 M1078.334,1536.361c-14.908,2.31-25.408,16.276-23.204,31.187 c2.204,15.121,16.274,25.411,31.188,23.206c15.016-2.205,25.516-16.065,23.311-31.081 C1107.419,1544.656,1093.35,1534.261,1078.334,1536.361 M944.664,432.864c-2.204-15.016-16.274-25.333-31.29-23.129 c-15.016,2.21-25.414,16.016-23.209,31.134c2.204,15.043,16.172,25.36,31.295,23.209 C936.369,461.821,946.869,447.961,944.664,432.864 M668.32,536.502c-9.349-11.941-26.672-13.806-38.591-4.462 c-11.812,9.398-13.967,26.623-4.516,38.537c9.505,11.946,26.725,13.941,38.591,4.543 C675.723,565.641,677.766,548.502,668.32,536.502" />
+                <path fill="#FFF" d="M942.879,597.695c-12.075,12.785-32.446,13.441-45.155,1.392c-12.914-12.204-13.543-32.419-1.468-45.338 c12.075-12.731,32.236-13.489,45.257-1.387C954.325,564.464,954.954,584.835,942.879,597.695 M1082.533,542.099 c-16.376-15.441-42.107-14.521-57.542,1.677c-15.328,16.328-14.591,42.08,1.892,57.515c16.274,15.435,42.107,14.623,57.332-1.677 C1099.651,583.179,1098.812,557.582,1082.533,542.099 M1405.005,1033.074c-11.973,12.812-11.339,33.075,1.468,45.15 c12.919,12.183,33.08,11.554,45.257-1.366c12.075-12.812,11.656-33.075-1.468-45.15 C1437.451,1019.607,1417.188,1020.236,1405.005,1033.074 M1394.715,891.974c-15.333,16.301-14.596,42.107,1.785,57.435 c16.274,15.543,42.107,14.65,57.44-1.731c15.537-16.172,14.699-41.978-1.683-57.413 C1435.876,874.883,1410.151,875.647,1394.715,891.974 M594.816,967.473c12.177-12.919,11.446-33.344-1.366-45.338 c-13.021-12.258-33.29-11.548-45.311,1.419c-11.865,12.887-11.548,32.946,1.419,45.123 C562.262,980.86,582.633,980.123,594.816,967.473 M605.106,1108.465c15.435-16.274,14.645-42.107-1.737-57.644 c-16.43-15.543-42.053-14.494-57.542,1.785c-15.274,16.274-14.543,42.107,1.785,57.434 C564.047,1125.583,589.719,1124.744,605.106,1108.465 M1058.281,1447.947c12.914,12.181,33.182,11.445,45.257-1.47 c12.075-12.601,11.656-33.076-1.263-45.152c-12.914-12.076-33.182-11.445-45.359,1.47 C1044.84,1415.501,1045.469,1435.871,1058.281,1447.947 M917.256,1458.133c16.489,15.541,42.107,14.806,57.44-1.575 c15.435-16.276,14.806-42.107-1.575-57.438c-16.381-15.541-42.316-14.595-57.65,1.575 C900.144,1417.075,900.875,1442.907,917.256,1458.133 M809.102,719.633c-13.441-3.887-27.091,3.806-30.978,16.984 c-3.882,13.285,3.57,27.037,16.908,30.951c13.231,3.935,27.091-3.753,31.08-16.93C829.892,737.456,822.231,723.649,809.102,719.633  M900.036,664.613c-16.903-4.833-34.44,4.747-39.483,21.419c-4.828,16.828,4.833,34.386,21.634,39.403 c16.801,4.882,34.44-4.57,39.376-21.5C926.288,687.214,916.627,669.57,900.036,664.613 M1281.207,884.254 c-3.995,13.441,3.779,27.301,16.903,31.107c13.339,3.941,27.091-3.645,30.978-16.93c3.887-13.231-3.57-27.091-16.801-30.844 C1299.056,863.593,1284.986,871.179,1281.207,884.254 M1226.181,793.374c-5.037,17.01,4.726,34.413,21.424,39.429 c16.801,4.882,34.333-4.806,39.376-21.634c5.037-16.613-4.624-34.231-21.526-39.193 C1248.756,767.041,1231.224,776.729,1226.181,793.374 M718.722,1116.239c3.882-13.231-3.785-27.198-16.855-30.876 c-13.441-3.989-27.252,3.57-30.978,16.801c-3.726,13.231,3.414,27.198,16.855,31.085 C700.867,1137.131,714.835,1129.465,718.722,1116.239 M773.716,1207.173c4.935-16.699-4.828-34.548-21.526-39.483 c-16.774-4.935-34.204,4.726-39.247,21.526c-5.038,16.801,4.516,34.333,21.424,39.376 C751.35,1233.632,768.678,1223.974,773.716,1207.173 M1190.794,1280.779c13.129,3.99,26.989-3.675,30.87-16.696 c3.995-13.336-3.57-27.196-16.693-31.081c-13.231-3.99-27.198,3.78-31.188,16.801 C1170.004,1263.033,1177.773,1276.894,1190.794,1280.779 M1099.86,1335.907c16.908,4.935,34.44-4.62,39.376-21.421 c4.935-16.696-4.511-34.336-21.419-39.272c-16.908-5.04-34.65,4.62-39.483,21.316 C1073.506,1313.436,1083.167,1331.077,1099.86,1335.907 M755.34,949.618c-10.5,5.618-14.36,18.849-8.715,29.349 c5.882,10.763,19.005,14.597,29.612,8.925c10.5-5.774,14.596-19.215,8.817-29.607C779.28,947.57,766.157,943.688,755.34,949.618  M775.189,875.856c-12.183,6.613-16.699,21.758-10.296,33.811c6.618,12.102,21.844,16.774,33.817,10.107 c12.285-6.462,16.903-21.715,10.29-33.817C802.28,873.91,787.264,869.394,775.189,875.856 M1082.958,797.471 c5.667,10.656,19.215,14.516,29.505,8.763c10.817-5.801,14.699-18.978,8.925-29.586c-5.564-10.629-19.005-14.618-29.505-9.027 C1081.275,773.605,1077.286,786.992,1082.958,797.471 M1009.453,777.777c6.403,12.102,21.527,16.618,33.602,10.005 c12.387-6.618,16.693-21.661,10.29-33.811c-6.408-12.054-21.634-16.726-33.811-9.951 C1007.351,750.477,1003.045,765.6,1009.453,777.777 M916.944,1202.55c-5.779-10.392-19.005-14.489-29.51-8.715 c-10.812,5.882-14.699,19.005-8.817,29.612c5.457,10.605,18.898,14.7,29.505,8.925 C918.729,1226.387,922.718,1213.049,916.944,1202.55 M990.551,1222.291c-6.403-12.075-21.736-16.381-33.913-10.08 c-12.183,6.511-16.489,21.842-10.188,33.812c6.72,12.181,21.838,16.696,33.919,10.186 C992.755,1249.803,997.169,1234.577,990.551,1222.291 M1244.664,1050.714c10.602-5.774,14.489-19.113,8.607-29.639 c-5.564-10.709-18.688-14.489-29.397-8.871c-10.715,5.828-14.387,18.978-9.032,29.795 C1220.514,1052.396,1234.165,1056.278,1244.664,1050.714 M1224.606,1124.32c12.392-6.72,16.801-21.736,10.5-33.913 c-6.613-12.075-21.736-16.699-33.913-10.188c-12.183,6.511-16.591,21.946-10.29,34.021 C1197.622,1126.212,1212.74,1130.728,1224.606,1124.32 M1408.683,377.897c5.145-24.44-10.398-48.225-34.757-53.37 c-24.365-5.226-48.198,10.156-53.451,34.569c-5.145,24.338,10.398,48.332,34.757,53.478 C1379.49,417.692,1403.43,402.203,1408.683,377.897 M1569.443,493.057c4.726-29.924-15.645-57.671-45.257-62.343 c-29.822-4.753-57.859,15.355-62.585,45.306c-4.726,29.795,15.645,57.805,45.467,62.483 C1536.681,543.222,1564.718,522.852,1569.443,493.057 M1699.016,642.688c3.887-37.537-23.204-70.848-60.483-74.837 c-37.274-3.86-70.875,23.123-74.864,60.585c-3.887,37.354,23.414,70.907,60.585,74.789 C1661.635,707.139,1695.135,679.994,1699.016,642.688 M1355.232,1587.814c-24.36,5.145-40.005,29.191-34.757,53.448 c5.253,24.466,29.086,40.007,53.451,34.756c24.36-5.145,39.902-28.981,34.757-53.552 C1403.43,1598.209,1379.49,1582.668,1355.232,1587.814 M1507.068,1462.018c-29.822,4.725-50.193,32.656-45.467,62.373 c4.726,29.926,32.763,50.087,62.585,45.362c29.612-4.725,49.983-32.447,45.257-62.373 C1564.718,1477.558,1536.681,1457.397,1507.068,1462.018 M1624.254,1297.265c-37.274,3.78-64.472,37.277-60.585,74.763 c3.989,37.487,37.591,64.368,74.864,60.483c37.279-3.99,64.37-37.277,60.483-74.763 C1695.027,1320.366,1661.635,1293.275,1624.254,1297.265 M644.535,412.574c24.306-5.145,39.849-29.139,34.704-53.478 c-5.145-24.414-29.037-39.795-53.397-34.569c-24.36,5.145-39.951,28.93-34.704,53.37 C596.283,402.203,620.224,417.692,644.535,412.574 M492.747,538.502c29.822-4.726,50.139-32.736,45.419-62.531 c-4.779-29.956-32.709-50.064-62.483-45.311c-29.768,4.726-50.031,32.473-45.306,62.348 C435.103,522.803,463.033,543.174,492.747,538.502 M375.405,703.225c37.381-3.935,64.58-37.435,60.59-74.789 c-3.941-37.462-37.408-64.445-74.767-60.585c-37.429,3.989-64.472,37.3-60.483,74.837 C304.606,679.994,337.997,707.139,375.405,703.225 M591.138,1622.57c-5.247,24.466,10.344,48.302,34.704,53.552 c24.311,5.146,48.252-10.396,53.451-34.861c5.091-24.257-10.451-48.302-34.757-53.448 C620.224,1582.668,596.283,1598.209,591.138,1622.57 M430.378,1507.38c-4.726,29.926,15.537,57.648,45.359,62.373 c29.72,4.725,57.752-15.436,62.477-45.362c4.726-29.717-15.645-57.648-45.467-62.373 C463.033,1457.397,435.152,1477.558,430.378,1507.38 M300.745,1357.748c-3.989,37.486,23.053,70.773,60.483,74.763 c37.36,3.885,70.827-22.996,74.767-60.483c3.989-37.486-23.209-70.983-60.59-74.763 C338.051,1293.275,304.606,1320.366,300.745,1357.748 M1100.49,427.746c-3.882-19.242-22.365-31.397-41.37-27.645 c-19.113,3.833-31.397,22.156-27.618,41.402c3.78,18.978,22.263,31.344,41.376,27.537 C1091.882,465.208,1104.269,446.724,1100.49,427.746 M1251.385,460.536c-5.882-22.892-29.085-36.489-51.768-30.688 c-22.785,5.747-36.65,28.876-30.768,51.768c5.774,22.731,29.085,36.618,51.875,30.736 C1243.401,506.551,1257.261,483.293,1251.385,460.536 M1390.619,527.739c-8.817-28.118-38.537-43.655-66.574-34.892 c-27.93,8.715-43.682,38.435-34.859,66.499c8.715,27.957,38.639,43.601,66.574,34.913 C1383.689,585.49,1399.334,555.695,1390.619,527.739 M1436.403,1311.651c-15.962,11.235-19.742,33.286-8.505,49.037 c11.339,15.961,33.182,19.636,49.139,8.4c15.86-11.13,19.532-33.077,8.296-49.037 C1474.101,1304.3,1452.15,1300.415,1436.403,1311.651 M1506.337,1174.512c-19.951,12.5-25.833,38.854-13.338,58.805 c12.602,19.951,38.956,25.726,58.805,13.23c19.844-12.706,25.935-38.853,13.231-58.804 C1552.433,1167.9,1526.073,1162.018,1506.337,1174.512 M1539.304,1020.133c-25.408,14.306-34.542,46.752-20.263,72.37 c14.489,25.623,46.833,34.548,72.348,20.161c25.623-14.381,34.65-46.618,20.263-72.241 C1597.271,1014.827,1565.035,1005.693,1539.304,1020.133 M563.418,688.817c15.855-11.29,19.634-33.236,8.398-48.988 c-11.339-16.064-33.182-19.607-48.983-8.371c-15.908,11.231-19.742,32.994-8.398,49.037 C525.666,696.295,547.612,700.048,563.418,688.817 M493.538,825.949c19.897-12.57,25.779-38.903,13.177-58.908 c-12.602-19.951-38.854-25.698-58.805-13.123c-19.736,12.575-25.774,38.827-13.123,58.779 C447.334,832.567,473.689,838.551,493.538,825.949 M460.302,980.333c25.623-14.279,34.757-46.725,20.371-72.268 c-14.387-25.65-46.832-34.628-72.294-20.215c-25.596,14.279-34.731,46.596-20.344,72.219 C402.394,985.639,434.786,994.774,460.302,980.333 M899.197,1572.798c3.887,19.111,22.473,31.396,41.478,27.616 c19.005-3.78,31.397-22.261,27.51-41.477c-3.78-19.006-22.365-31.291-41.478-27.511 C907.805,1535.206,895.418,1553.897,899.197,1572.798 M748.41,1539.931c5.882,22.891,28.983,36.542,51.768,30.661 c22.785-5.775,36.542-28.771,30.768-51.767c-5.779-22.681-29.091-36.541-51.875-30.661 C756.388,1493.939,742.636,1517.04,748.41,1539.931 M609.197,1472.728c8.822,28.246,38.435,43.577,66.418,34.862 c27.983-8.715,43.736-38.327,34.913-66.468c-8.661-28.036-38.537-43.682-66.52-34.862 C616.025,1414.975,600.38,1444.692,609.197,1472.728" />
+                <path fill="#FFF" d="M1334.335,721.945c-19.844,20.919-53.235,21.994-74.445,1.995c-21.107-20.005-22.053-53.241-1.995-74.316 c19.844-21.161,53.026-22.236,74.235-2.312C1353.238,667.263,1354.286,700.548,1334.335,721.945 M1215.891,576.249 c-18.688-17.537-47.462-16.51-64.682,1.839c-17.328,18.376-16.591,47.252,1.785,64.655c18.376,17.328,47.569,16.462,64.682-1.86 C1235.003,622.527,1234.267,593.496,1215.891,576.249 M1345.571,761.24c-17.322,18.403-16.591,47.359,1.892,64.682 c18.478,17.355,47.462,16.333,64.58-1.995c17.43-18.376,16.586-47.144-1.893-64.682 C1391.882,741.945,1362.899,742.918,1345.571,761.24 M742.109,1350.713c19.849-21.106,18.903-54.288-2.177-74.449 c-21.317-19.846-54.601-18.796-74.45,2.205c-19.844,21.421-18.951,54.393,2.312,74.554 C688.846,1372.869,722.292,1371.923,742.109,1350.713 M654.245,1239.197c17.328-18.374,16.435-47.465-1.833-64.685 c-18.537-17.532-47.413-16.274-64.58,1.995c-17.274,18.166-16.747,47.257,1.731,64.685 C608.047,1258.413,637.078,1257.468,654.245,1239.197 M784.113,1424.111c18.376,17.431,47.462,16.591,64.574-1.89 c17.226-18.481,16.699-47.357-1.887-64.578c-18.376-17.326-47.461-16.381-64.682,1.995 C764.791,1377.804,765.737,1406.785,784.113,1424.111 M1102.909,649.909c-21.946-6.301-44.628,6.172-50.827,27.854 c-6.296,21.763,5.672,44.392,27.725,50.849c21.736,6.457,44.413-5.909,50.714-27.537 C1137.139,679.155,1124.645,656.344,1102.909,649.909 M1000.841,642.113c-19.113-5.699-38.747,5.199-44.311,24.075 c-5.672,18.924,5.145,38.612,24.15,44.311c18.795,5.591,38.537-5.382,44.101-24.102 C1030.561,667.473,1019.744,647.602,1000.841,642.113 M1148.795,722.811c-5.672,18.768,5.145,38.591,24.15,44.182 c18.903,5.591,38.639-5.489,44.209-24.284c5.667-18.822-5.145-38.666-24.048-44.311 C1174.101,692.859,1154.359,703.935,1148.795,722.811 M947.917,1322.781c6.409-21.736-5.876-44.522-27.822-51.032 c-21.736-6.195-44.526,6.09-50.822,27.826c-6.301,21.946,5.876,44.522,27.822,51.032 C918.831,1356.803,941.723,1344.307,947.917,1322.781 M851.209,1277.839c5.462-18.691-5.247-38.747-24.36-44.207 c-18.903-5.566-38.537,5.25-44.101,24.256c-5.462,18.796,5.145,38.536,24.15,44.207 C825.903,1307.45,845.537,1296.635,851.209,1277.839 M999.163,1358.378c18.898,5.775,38.849-5.146,44.203-23.941 c5.462-19.006-5.145-38.852-24.043-44.312c-19.113-5.67-38.854,5.25-44.419,24.151 C969.443,1333.071,980.26,1352.813,999.163,1358.378 M872.418,764.154c-15.328,8.322-21.209,27.672-12.704,42.999 c8.296,15.489,27.51,21.398,43.161,13.021c15.537-8.349,21.102-27.639,12.914-43.026 C907.493,761.503,887.961,755.703,872.418,764.154 M815.72,812.223c-13.865,7.505-18.903,24.279-11.446,38.22 c7.349,13.494,24.252,18.639,37.8,11.236c13.968-7.322,18.903-24.467,11.656-37.908C846.381,810.121,829.263,804.739,815.72,812.223  M932.799,780.826c7.349,13.806,24.467,18.795,38.118,11.548c13.543-7.478,18.586-24.467,11.236-38.22 c-7.145-13.548-24.467-18.72-38.118-11.29C930.487,750.165,925.659,767.331,932.799,780.826 M1140.29,1192.996 c-8.403-15.543-27.725-21.634-43.263-13.021c-15.435,8.296-21.424,27.618-12.812,43.155c8.398,15.437,27.72,21.003,43.263,12.918 C1142.806,1227.542,1148.585,1208.114,1140.29,1192.996 M1067.098,1219.248c-7.349-13.65-24.252-18.693-38.112-11.446 c-13.656,7.242-18.376,24.255-11.027,38.115c7.242,13.545,24.15,18.901,37.908,11.236 C1069.517,1250.013,1074.452,1232.792,1067.098,1219.248 M1184.493,1187.743c13.65-7.14,18.586-24.462,11.236-38.01 c-7.559-13.441-24.467-18.795-38.01-11.236c-13.65,7.349-18.693,24.36-11.344,38.01 C1153.623,1190.055,1170.633,1195.2,1184.493,1187.743 M1810.746,1000.182c0-45.365-36.542-81.563-81.59-81.563 c-45.155,0-81.59,36.198-81.59,81.456c0,45.177,36.435,81.827,81.482,81.827C1774.203,1081.901,1810.746,1045.251,1810.746,1000.182  M1779.349,815.266c2.204-41.553-29.715-76.655-70.983-78.751c-41.268-2.156-76.655,29.349-78.757,70.956 c-2.204,41.343,29.612,76.73,70.773,78.886C1741.86,888.507,1777.246,856.663,1779.349,815.266 M1700.382,1114.137 c-41.161,2.102-72.977,37.489-70.773,78.751c2.102,41.688,37.489,73.085,78.757,70.985c41.268-2.205,73.187-37.172,70.983-78.862 C1777.246,1143.75,1741.758,1111.933,1700.382,1114.137 M270.692,1081.901c44.886,0,81.456-36.65,81.456-81.827 c0-45.257-36.569-81.456-81.456-81.456c-44.999,0-81.671,36.198-81.671,81.563C189.022,1045.251,225.693,1081.901,270.692,1081.901  M299.278,886.356c41.343-2.156,73.138-37.542,70.983-78.886c-2.151-41.607-37.489-73.112-78.988-70.956 c-41.166,2.097-73.112,37.198-70.907,78.751C222.521,856.663,257.956,888.507,299.278,886.356 M220.365,1185.012 c-2.204,41.69,29.741,76.761,70.961,78.862c41.445,2.205,76.784-29.297,78.988-70.985c2.151-41.263-29.693-76.649-71.036-78.751 C257.956,1111.933,222.521,1143.75,220.365,1185.012 M1581.201,749.536c-13.962-32.478-51.451-47.23-83.687-33.344 c-32.344,14.021-47.359,51.246-33.392,83.719c14.07,32.419,51.558,47.3,83.794,33.365 C1580.26,819.363,1595.169,781.772,1581.201,749.536 M1501.611,626.624c-11.236-30.478-45.048-45.757-75.289-34.569 c-30.349,11.231-45.886,44.784-34.655,75.208c11.236,30.424,44.945,45.913,75.289,34.677 C1497.305,690.757,1512.848,657,1501.611,626.624 M1537.417,865.222c-28.876,14.36-40.849,49.456-26.462,78.359 c14.387,29.295,49.456,40.951,78.439,26.569c28.978-14.285,40.951-49.225,26.462-78.413 C1601.572,862.808,1566.395,850.862,1537.417,865.222 M502.306,1284.244c32.236-13.965,47.144-51.452,33.182-83.792 c-13.968-32.451-51.349-47.15-83.585-33.182c-32.29,13.86-47.413,51.241-33.365,83.687 C432.474,1283.299,470.07,1298.105,502.306,1284.244 M462.404,1135.244c28.978-14.285,40.843-49.462,26.462-78.547 c-14.387-29.086-49.461-40.768-78.493-26.354c-28.876,14.279-40.978,49.354-26.564,78.439 C398.217,1137.76,433.421,1149.524,462.404,1135.244 M498.156,1373.708c11.29,30.662,44.994,45.887,75.235,34.547 c30.403-11.235,45.94-44.627,34.655-75.184c-11.236-30.346-44.945-45.782-75.187-34.546 C502.516,1309.76,486.92,1343.467,498.156,1373.708" />
+            </svg>
+                    
+                 </a>
+            </div>
+            <div class="encabezado">
+                <p id="Titulo" class="TextoB">Curso sobre Derecho y Código Tributario</p>
+                <!-- <p id="Coleccion">Sistematizado con jurisprudencia</p> -->
+            </div>
+        </div>
+        <!-- MENU -->
+        <div class="links">
+            <div class="topnav">
+                <p id="Autor">Christian Aste Mejías</p>
+            </div>
+        </div>
+        <div class="hamb">
+            <div class="menu">
+                <button class="colapsable blob"></button>
+                <div class="content">
+                    <a href="#tomoI">
+                        <div>
+                            Tomo I
+                        </div>
+                    </a>
+                    <a href="#tomoII">
+                        <div>
+                            Tomo II
+                        </div>
+                    </a>
+                    <a href="#salto">
+                        <div class="palette" id="inicio">
+                            Haga clic aquí para leer el inicio
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <section id="indice" ><!-- ÍNDICE TOMO I -->
+        <div id="container" >
+            <p id="tomoI" class="IG_Tomo">Tomo I</p>           
+            <p class="IG_CapituloNumero">Capítulo I<br>Potestad tributaria</p>
+            <p class="IG_1">1. Concepto </p>
+            <p class="IG_1">2. Características del Poder Tributario </p>
+            <p class="IG_2">2.1. Es originario </p>
+            <p class="IG_2">2.2. Es irrenunciable </p>
+            <p class="IG_2">2.3. Es abstracto </p>
+            <p class="IG_2">2.4. Es imprescriptible </p>
+            <p class="IG_2">2.5. Es territorial </p>
+            <p class="IG_1">3. Límites del Poder Tributario </p>
+            <p class="IG_2">3.1. Límite externo </p>
+            <p class="IG_2">3.2. Límite interno </p>
+            <p class="IG_1">4. Principios constitucionales que limitan internamente el Poder Tributario </p>
+            <p class="IG_2">4.1. Principio de Legalidad </p>
+            <p class="IG_3">4.1.1. Concepto </p>
+            <p class="IG_3">4.1.2. Antecedente normativo </p>
+            <p class="IG_3">4.1.3. Acta constitucional </p>
+            <p class="IG_3">4.1.4. Amplitud del principio de legalidad </p>
+            <p class="IG_4">4.1.4.1. Doctrina de la reserva legal restringida </p>
+            <p class="IG_4">4.1.4.2. Doctrina de la reserva legal amplia </p>
+            <p class="IG_4">4.1.4.3. Ventaja de la última doctrina </p>
+            <p class="IG_3">4.1.5. Fundamento de la garantía de la legalidad </p>
+            <p class="IG_3">4.1.6. Características de la garantía de la legalidad en la Constitución de 1980 </p>
+            <p class="IG_4">4.1.6.1. Iniciativa exclusiva del Presidente de la República </p>
+            <p class="IG_4">4.1.6.2. Origen de la ley tributaria </p>
+            <p class="IG_4">4.1.6.3. Facultad exclusiva del legislador en materia tributaria </p>
+            <p class="IG_4">4.1.6.4. La no afectación de los tributos </p>
+            <p class="IG_3">4.1.7. Consecuencias del principio de legalidad </p>
+            <p class="IG_3">4.1.8. Alcances del principio de legalidad </p>
+            <p class="IG_3">4.1.9. Doctrina del Tribunal Constitucional </p>
+            <p class="IG_3">4.1.10. Posibilidad de remisión a la potestad reglamentaria de ejecución en materia tributaria </p>
+            <p class="IG_3">4.1.11. El principio de legalidad en el Código Tributario Modelo para América Latina </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">4.2. Principio de Igualdad </p>
+            <p class="IG_3">4.2.1. Concepto </p>
+            <p class="IG_3">4.2.2. La fuente de las diferencias en materia tributaria puede ser cualquiera de las siguientes </p>
+            <p class="IG_4">4.2.2.1. Capacidad contributiva </p>
+            <p class="IG_4">4.2.2.2. Origen de la renta </p>
+            <p class="IG_4">4.2.2.3. Beneficio del contribuyente </p>
+            <p class="IG_3">4.2.3. Antecedente normativo </p>
+            <p class="IG_3">4.2.4. Fundamento constitucional </p>
+            <p class="IG_3">4.2.5. Igualdad en la esfera tributaria </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">4.3. Principio de generalidad </p>
+            <p class="IG_3">4.3.1. Concepto </p>
+            <p class="IG_3">4.3.2. Fundamento constitucional </p>
+            <p class="IG_3">4.3.3. Manifestaciones legislativas de las exenciones </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">4.4. Principio del Derecho de Propiedad </p>
+            <p class="IG_3">4.4.1. Concepto </p>
+            <p class="IG_3">4.4.2. Antecedente normativo </p>
+            <p class="IG_3">4.4.3. El respeto a este derecho se manifiesta en tres formas concretas </p>
+            <p class="IG_4">4.4.3.1. Irretroactividad de la ley tributaria </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">4.4.3.2. No confiscatoriedad de los tributos </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">4.4.3.3. Respeto a las obligaciones derivadas de contratos leyes </p>
+            <p class="IG_5">4.4.3.3.1. Validez de los contratos leyes </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">4.4.4. Fundamento constitucional de la propiedad </p>
+            <p class="IG_2">4.5. Principio de Protección Jurisdiccional </p>
+            <p class="IG_3">4.5.1. Concepto </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">4.5.2. Fundamento constitucional </p>
+            <p class="IG_3">4.5.3. El decaimiento como consecuencia de la nulidad de los juicios tributarios </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_CapituloNumero">Capítulo II<br>Derechos de los contribuyentes</p>
+            <p class="IG_1">1. Derechos de los contribuyentes </p>
+            <p class="IG_2">1.1. Derecho Comparado: </p>
+            <p class="IG_1">2. Procedimientos de Impugnación en contra de actos administrativos de naturaleza tributaria </p>
+            <p class="IG_2">2.1. Recurso de Protección </p>
+            <p class="IG_3">2.1.1. Antecedentes </p>
+            <p class="IG_3">2.1.2. Naturaleza jurídica </p>
+            <p class="IG_3">2.1.3. Concepto </p>
+            <p class="IG_3">2.1.4. Objetivo </p>
+            <p class="IG_3">2.1.5. Consideraciones </p>
+            <p class="IG_3">2.1.6. Requisitos constitucionales de esta acción </p>
+            <p class="IG_4">2.1.6.1. Concurrencia de dos partes </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">2.1.6.2. Afectación de determinados derechos constitucionales </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">2.1.6.3. El sujeto activo debe ser el titular del derecho violentado </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">2.1.6.4. El recurrente debe estar en el legítimo ejercicio de sus derechos constitucionales </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">2.1.6.5. La afectación debe producirse en forma de privación, perturbación o amenaza </p>
+            <p class="IG_4">2.1.6.6. La afectación debe reconocer como causa una acción u omisión arbitraria o ilegal </p>
+            <p class="IG_3">2.1.7. Requisitos adicionales impuestos por la Corte </p>
+            <p class="IG_4">2.1.7.1. Plazo </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">2.1.7.2. Imposibilidad de impugnar resoluciones judiciales </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">2.1.7.3. Imposibilidad de impugnar disposiciones legales </p>
+            <p class="IG_4">2.1.7.4. Existencia de un derecho necesario de restablecer </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">2.1.7.5. Que la materia tratada no sea propia de un juicio ordinario </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">2.2. Reclamo por vulneración de Derechos </p>
+            <p class="IG_3">2.2.1. Requisitos </p>
+            <p class="IG_3">2.2.2. Tramitación </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">2.3. Recurso de resguardo </p>
+            <p class="IG_2">2.4. Recurso de reposición administrativo </p>
+            <p class="IG_3">2.4.1. Actos que pueden ser objeto de reposición administrativa </p>
+            <p class="IG_3">2.4.2. Procedimiento </p>
+            <p class="IG_4">2.4.2.1. Plazo </p>
+            <p class="IG_4">2.4.2.2. Silencio negativo </p>
+            <p class="IG_4">2.4.2.3. Efectos de su presentación </p>
+            <p class="IG_4">2.4.2.4. Delegación </p>
+            <p class="IG_4">2.4.2.5. Alcances de la resolución </p>
+            <p class="IG_4">2.4.2.6. Audiencia al contribuyente </p>
+            <p class="IG_4">2.4.2.7. Prueba y apreciación </p>
+            <p class="IG_4">2.4.2.8. Inadmisibilidad de recursos </p>
+            <p class="IG_2">2.5. Recurso Jerárquico </p>
+            <p class="IG_CapituloNumero">Capítulo III<br>Principios de la imposición</p>
+            <p class="IG_1">1. Principios clásicos </p>
+            <p class="IG_2">1.1. Economicidad </p>
+            <p class="IG_2">1.2. Certeza tributaria </p>
+            <p class="IG_2">1.3. Principios económicos </p>
+            <p class="IG_2">1.4. Principios administrativos </p>
+            <p class="IG_3">1.4.1. Comodidad </p>
+            <p class="IG_3">1.4.2. Economía en la percepción </p>
+            <p class="IG_3">1.4.3. Equidad en la imposición </p>
+            <p class="IG_1">2. Principios de Neumark </p>
+            <p class="IG_2">2.1. Fin ético </p>
+            <p class="IG_3">2.1.1. Generalidad </p>
+            <p class="IG_3">2.1.2. Igualdad </p>
+            <p class="IG_3">2.1.3. Proporcionalidad o gravamen sobre la capacidad de pago </p>
+            <p class="IG_3">2.1.4. Redistribución </p>
+            <p class="IG_2">2.2. Fines económicos </p>
+            <p class="IG_3">2.2.1. Principios Políticos de orden económico </p>
+            <p class="IG_4">2.2.1.1. Evitar el dirigismo fiscal </p>
+            <p class="IG_4">2.2.1.2. Minimizar la intervención tributaria </p>
+            <p class="IG_4">2.2.1.3. Evitar distorsiones a la competencia y favorecerla </p>
+            <p class="IG_3">2.2.2. De proceso económico </p>
+            <p class="IG_4">2.2.2.1. Suficiencia </p>
+            <p class="IG_4">2.2.2.2. Capacidad </p>
+            <p class="IG_4">2.2.2.3. Flexibilidad activa </p>
+            <p class="IG_4">2.2.2.4. Flexibilidad pasiva </p>
+            <p class="IG_4">2.2.2.5. Favorecer el desarrollo </p>
+            <p class="IG_2">2.3. Fin operativo </p>
+            <p class="IG_3">2.3.1. Principios Técnicos tributarios </p>
+            <p class="IG_4">2.3.1.1. Congruencia y sistematización </p>
+            <p class="IG_4">2.3.1.2. Transparencia </p>
+            <p class="IG_4">2.3.1.3. Factibilidad </p>
+            <p class="IG_4">2.3.1.4. Continuidad </p>
+            <p class="IG_4">2.3.1.5. Economicidad </p>
+            <p class="IG_4">2.3.1.6. Comodidad </p>
+            <p class="IG_1">3. Conclusión </p>
+            <p class="IG_CapituloNumero">Capítulo IV<br>Derecho Tributario</p>
+            <p class="IG_1">1. Concepto </p>
+            <p class="IG_1">2. Fuentes del derecho tributario </p>
+            <p class="IG_2">2.1. Disposiciones constitucionales </p>
+            <p class="IG_2">2.2. Tratados internacionales </p>
+            <p class="IG_2">2.3. Las leyes o actos de autoridad equivalentes a la ley </p>
+            <p class="IG_2">2.4. Decretos, reglamentos, instrucciones y circulares dictadas por el Ejecutivo </p>
+            <p class="IG_2">2.5. Otras fuentes </p>
+            <p class="IG_1">3. Autonomía del Derecho Tributario </p>
+            <p class="IG_1">4. Reglas de interpretación </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_CapituloNumero">Capítulo V<br>La obligación tributaria</p>
+            <p class="IG_1">1. Concepto </p>
+            <p class="IG_1">2. Elementos de la obligación tributaria </p>
+            <p class="IG_2">2.1. La ley, única fuente válida de imposición </p>
+            <p class="IG_2">2.2. Los sujetos que intervienen en la obligación tributaria reciben la denominación de activos y
+                pasivos </p>
+            <p class="IG_3">2.2.1. Es sujeto activo, el ente acreedor del tributo </p>
+            <p class="IG_3">2.2.2. Es pasivo, el ente obligado </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">2.2.3. Situaciones especiales </p>
+            <p class="IG_4">2.2.3.1. Cuentas en participación </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_4">2.2.3.2. Comuneros </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_4">2.2.3.3. Administradores de bienes ajenos </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_2">2.3. La causa </p>
+            <p class="IG_2">2.4. El objeto, esto es, la prestación a que se obliga el sujeto pasivo </p>
+            <p class="IG_3">2.4.1. Prestación principal </p>
+            <p class="IG_3">2.4.2. Prestaciones accesorias </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_1">3. Modos de extinguir la obligación tributaria </p>
+            <p class="IG_2">3.1. Concepto </p>
+            <p class="IG_2">3.2. Modos de extinguir </p>
+            <p class="IG_3">3.2.1. Cumplimiento o pago </p>
+            <p class="IG_4">3.2.1.1. Pago por equivalencia </p>
+            <p class="IG_4">3.2.1.2. Pagos provisionales mensuales </p>
+            <p class="IG_4">3.2.1.3. Incumplimiento </p>
+            <p class="IG_4">3.2.1.4. Cumplimiento forzado </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">3.2.2. Compensación </p>
+            <p class="IG_4">3.2.2.1. La compensación y los impuestos </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">3.2.3. Confusión </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">3.2.4. Declaración de nulidad del acto o contrato generador del impuesto </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">3.2.5. Remisión </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">3.2.6. Prescripción </p>
+            <p class="IG_4">3.2.6.1. Acciones sujetas a prescripción </p>
+            <p class="IG_5">3.2.6.1.1. Acción de cobro </p>
+            <p class="IG_5">3.2.6.1.2. Acción fiscalizadora </p>
+            <p class="IG_5">3.2.6.1.3. Acción sancionadora </p>
+            <p class="IG_4">3.2.6.2. Plazos de prescripción para las acciones de cobro y fiscalizadora </p>
+            <p class="IG_5">3.2.6.2.1. Plazo ordinario </p>
+            <p class="IG_5">3.2.6.2.2. Plazo extraordinario </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_5">3.2.6.2.3. Aumento del plazo </p>
+            <p class="IG_4">3.2.6.3. Plazo de prescripción de la acción sancionadora </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">3.2.6.4. Suspensión de la prescripción </p>
+            <p class="IG_5">3.2.6.4.1. Por impedimento de girar impuestos reclamados </p>
+            <p class="IG_5">3.2.6.4.2. Ausencia del contribuyente </p>
+            <p class="IG_5">3.2.6.4.3. La pérdida o inutilización de los documentos y libros contables suspende el plazo de
+                prescripción del artículo 200 del Código Tributario </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_4">3.2.6.5. Interrupción de la prescripción </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_CapituloNumero">Capítulo VI<br>Obligación tributaria principal: <br />pagar los tributos</p>
+            <p class="IG_1">1. Impuesto </p>
+            <p class="IG_2">1.1. Concepto </p>
+            <p class="IG_2">1.2. Características </p>
+            <p class="IG_1">2. Tasa </p>
+            <p class="IG_2">2.1. Concepto </p>
+            <p class="IG_2">2.2. Características </p>
+            <p class="IG_1">3. Contribución </p>
+            <p class="IG_2">3.1. Concepto </p>
+            <p class="IG_2">3.2. Características </p>
+            <p class="IG_1">4. Efectos de los impuestos </p>
+            <p class="IG_2">4.1. Económico </p>
+            <p class="IG_3">4.1.1. Microimpacto </p>
+            <p class="IG_4">4.1.1.1. Efectos en la familia </p>
+            <p class="IG_4">4.1.1.2. Efectos en la empresa </p>
+            <p class="IG_3">4.1.2. Macroimpacto </p>
+            <p class="IG_2">4.2. Financiero </p>
+            <p class="IG_2">4.3. Social </p>
+            <p class="IG_1">5. Consideraciones que debemos tener presente al momento de establecer impuestos </p>
+            <p class="IG_1">6. Clasificación de los impuestos </p>
+            <p class="IG_2">6.1. Impuestos directos e indirectos </p>
+            <p class="IG_2">6.2. Impuestos personales y reales </p>
+            <p class="IG_2">6.3. Impuestos con tasa fija e impuestos con tasa variable </p>
+            <p class="IG_2">6.4. Impuestos ordinarios y extraordinarios </p>
+            <p class="IG_2">6.5. Impuesto único y múltiple </p>
+            <p class="IG_2">6.6. Impuestos externos e internos </p>
+            <p class="IG_3">6.6.1. Importancia de esta clasificación </p>
+            <p class="IG_1">7. Nuestro sistema </p>
+            <p class="IG_2">7.1. Impuestos Indirectos </p>
+            <p class="IG_3">7.1.1. Impuesto a las Ventas y Servicios </p>
+            <p class="IG_3">7.1.2. Impuesto Único de sueldos, salarios y pensiones de Segunda Categoría </p>
+            <p class="IG_3">7.1.3. Impuesto Adicional </p>
+            <p class="IG_3">7.1.4. Impuesto a los productos suntuarios </p>
+            <p class="IG_4">7.1.4.1. Impuesto a las bebidas alcohólicas, analcohólicas y productos similares </p>
+            <p class="IG_4">7.1.4.2. Impuesto a la cilindrada y al lujo en la importación de vehículos </p>
+            <p class="IG_4">7.1.4.3. Impuesto a los tabacos, cigarrillos y cigarros </p>
+            <p class="IG_4">7.1.4.4. Impuesto a los combustibles </p>
+            <p class="IG_3">7.1.5. Impuesto a los actos jurídicos - Timbres y Estampillas </p>
+            <p class="IG_3">7.1.6. Impuesto al Comercio exterior </p>
+            <p class="IG_2">7.2. Impuestos Directos </p>
+            <p class="IG_3">7.2.1. Impuesto a la Renta de Primera Categoría </p>
+            <p class="IG_3">7.2.2. Impuesto Global Complementario </p>
+            <p class="IG_2">7.3. Otros Impuestos </p>
+            <p class="IG_3">7.3.1. Impuesto Territorial </p>
+            <p class="IG_3">7.3.2. Impuesto a las Herencias y Donaciones </p>
+            <p class="IG_CapituloNumero">Capítulo VII<br>Definiciones previas y prestaciones accesorias</p>
+            <p class="IG_1">1. Definiciones previas </p>
+            <p class="IG_1">2. Prestaciones accesorias </p>
+            <p class="IG_2">2.1. Inscripción en registros (RUT y declaración jurada de inicio de actividades) </p>
+            <p class="IG_3">2.1.1. Inscripción en el Rol Único Tributario </p>
+            <p class="IG_4">2.1.1.1. No deben obtener cédula RUT </p>
+            <p class="IG_4">2.1.1.2. Deben obtener sólo RUT </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">2.1.2. Declaración de iniciación de actividades </p>
+            <p class="IG_4">2.1.2.1. No deben hacer el trámite de iniciación de actividades </p>
+            <p class="IG_4">2.1.2.2. Personas que sólo deben realizar el trámite de iniciación de actividades </p>
+            <p class="IG_3">2.1.3. Inscripción en el RUT e iniciación de actividades como trámite conjunto </p>
+            <p class="IG_4">2.1.3.1. Contribuyentes que se encuentran obligados a efectuar este trámite </p>
+            <p class="IG_4">2.1.3.2. Lugar en que debe realizarse el trámite </p>
+            <p class="IG_4">2.1.3.3. Formularios que se deben utilizar </p>
+            <p class="IG_4">2.1.3.4. Declaración </p>
+            <p class="IG_4">2.1.3.5. Requisitos que deben cumplirse para realizar el trámite </p>
+            <p class="IG_4">2.1.3.6. Información que debe completarse </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">2.1.4. Incumplimiento a estas obligaciones </p>
+            <p class="IG_3">2.1.5. Trámite simplificado para dar aviso de iniciación de actividades </p>
+            <p class="IG_2">2.2. Aviso de modificaciones </p>
+            <p class="IG_3">2.2.1. Fundamento legal </p>
+            <p class="IG_3">2.2.2. Se excepcionan de esta obligación </p>
+            <p class="IG_4">2.2.2.1. Las modificaciones que presentan las sociedades anónimas abiertas en su composición accionaria
+            </p>
+            <p class="IG_4">2.2.2.2. Contribuyentes sin cobertura de datos móviles </p>
+            <p class="IG_3">2.2.3. Inscripción en registros especiales </p>
+            <p class="IG_3">2.2.4. Sanción </p>
+            <p class="IG_3">2.2.5. Modificaciones que deben informarse al Servicio </p>
+            <p class="IG_3">2.2.6. Forma en que debe hacerse la comunicación </p>
+            <p class="IG_3">2.2.7. Oportunidad en que debe informarse </p>
+            <p class="IG_3">2.2.8. Clasificación de las modificaciones </p>
+            <p class="IG_4">2.2.8.1. Modificaciones simples </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_4">2.2.8.2. Modificaciones complejas </p>
+            <p class="IG_5">2.2.8.2.1. El aporte de todo el activo y pasivo a otra sociedad: </p>
+            <p class="IG_5">2.2.8.2.2. Fusión de sociedades </p>
+            <p class="IG_5">2.2.8.2.3. Conversión de empresa individual en sociedad de cualquier naturaleza </p>
+            <p class="IG_5">2.2.8.2.4. Absorción de sociedades </p>
+            <p class="IG_5">2.2.8.2.5. División de sociedades </p>
+            <p class="IG_5">2.2.8.2.6. Disolución de sociedades anónimas por reunirse las acciones en una sola persona natural o
+                jurídica </p>
+            <p class="IG_4">2.2.8.3. Modificaciones múltiples </p>
+            <p class="IG_3">2.2.9. Observaciones generales </p>
+            <p class="IG_3">2.2.10. Acciones de fiscalización y/o corrección de información en la base de datos </p>
+            <p class="IG_2">2.3. Obligación de timbrar determinados documentos tributarios </p>
+            <p class="IG_3">2.3.1. Verificación de actividad </p>
+            <p class="IG_3">2.3.2. Requisitos del trámite </p>
+            <p class="IG_3">2.3.3. Facturación Electrónica </p>
+            <p class="IG_3">2.3.4. Derecho especial en relación al timbraje de los contribuyentes que optan por facturación
+                electrónica </p>
+            <p class="IG_4">2.3.4.1. Infracción </p>
+            <p class="IG_4">2.3.4.2. Publicidad </p>
+            <p class="IG_3">2.3.5. Factura de inicio </p>
+            <p class="IG_3">2.3.6. Mecanismo de impugnación </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_2">2.4. Llevar contabilidad </p>
+            <p class="IG_3">2.4.1. Contabilidad fidedigna </p>
+            <p class="IG_4">2.4.1.1. No hay contabilidad fidedigna </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">2.4.2. Formas en que puede llevarse la contabilidad </p>
+            <p class="IG_4">2.4.2.1. Se encuentran obligados a llevar contabilidad completa </p>
+            <p class="IG_4">2.4.2.2. Se encuentran obligados a determinar su renta mediante contabilidad simplificada </p>
+            <p class="IG_4">2.4.2.3. No se encuentran obligados a determinar su renta mediante contabilidad </p>
+            <p class="IG_4">2.4.2.4. Se encuentran facultados para llevar contabilidad simplificada </p>
+            <p class="IG_3">2.4.3. Fecha en que debe confeccionarse el balance </p>
+            <p class="IG_3">2.4.4. Infracciones relativas a la contabilidad </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">2.4.5. Incautación de la contabilidad </p>
+            <p class="IG_3">2.4.6. Contabilidad electrónica </p>
+            <p class="IG_3">2.4.7. Requisitos que deben cumplirse por los contribuyentes para ser autorizados para adherir al modelo
+                de operación de contabilidad electrónica </p>
+            <p class="IG_4">2.4.7.1. Formalidades </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">2.4.8. Valor probatorio de registros contenidos en hojas impresas cuyo timbraje fue autorizado con fecha
+                posterior a los hechos económicos que se asientan </p>
+            <p class="IG_2">2.5. Obligación de declarar y pagar </p>
+            <p class="IG_3">2.5.1. Formas de determinación </p>
+            <p class="IG_4">2.5.1.1. Determinación judicial </p>
+            <p class="IG_4">2.5.1.2. Determinación administrativa </p>
+            <p class="IG_4">2.5.1.3. Determinación mixta </p>
+            <p class="IG_4">2.5.1.4. Autodeterminación </p>
+            <p class="IG_3">2.5.2. Secreto de la información tributaria </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">2.5.3. Contribuyentes obligados a presentar declaraciones de impuestos </p>
+            <p class="IG_4">2.5.3.1. Ley sobre Impuesto a la Renta </p>
+            <p class="IG_4">2.5.3.2. Casos especiales </p>
+            <p class="IG_4">2.5.3.3. Ley sobre Impuesto a las Ventas y Servicios </p>
+            <p class="IG_3">2.5.4. Prórroga del plazo en la presentación de la Declaración Anual del Impuesto a la Renta </p>
+            <p class="IG_3">2.5.5. Cómputo del plazo de la prórroga concedida </p>
+            <p class="IG_3">2.5.6. Formularios para la declaración y pago </p>
+            <p class="IG_3">2.5.7. Declaraciones por Internet </p>
+            <p class="IG_4">2.5.7.1. Obligados a declarar por Internet </p>
+            <p class="IG_4">2.5.7.2. Acceso a Internet </p>
+            <p class="IG_3">2.5.8. Pago diferido de los Impuestos a la Renta, a partir de la Operación Renta 2006 </p>
+            <p class="IG_4">2.5.8.1. Procedimiento </p>
+            <p class="IG_4">2.5.8.2. Modificación de valor a diferir </p>
+            <p class="IG_3">2.5.9. Declaraciones juradas </p>
+            <p class="IG_3">2.5.10. Multideclaraciones tributarias </p>
+            <p class="IG_3">2.5.11. Moneda en que deben pagarse los impuestos </p>
+            <p class="IG_4">2.5.11.1. Tratamiento aplicable a las devoluciones de impuestos cuando el pago de los mismos ha sido
+                realizado en moneda extranjera </p>
+            <p class="IG_4">2.5.11.2. Alcances del concepto moneda extranjera </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_2">2.6. Obligación de dar aviso de término de giro </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">2.6.1. Objetivos del procedimiento de término de giro </p>
+            <p class="IG_3">2.6.2. Obligados a dar aviso de término de giro </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">2.6.3. Casos en que no hay término de giro </p>
+            <p class="IG_3">2.6.4. Plazo para dar aviso de término de giro </p>
+            <p class="IG_3">2.6.5. Sanciones por no dar aviso de término de giro </p>
+            <p class="IG_3">2.6.6. Procedimiento </p>
+            <p class="IG_4">2.6.6.1. Forma de hacerlo </p>
+            <p class="IG_4">2.6.6.2. Plazo </p>
+            <p class="IG_4">2.6.6.3. Silencio positivo </p>
+            <p class="IG_4">2.6.6.4. No aplica el silencio positivo </p>
+            <p class="IG_4">2.6.6.5. Plazo para revisar si se presentan antecedentes adicionales </p>
+            <p class="IG_4">2.6.6.6. Requisitos que se deben cumplir para realizar el trámite de término de giro </p>
+            <p class="IG_3">2.6.7. Prórroga para presentar la declaración anual de renta en el caso de término de giro </p>
+            <p class="IG_3">2.6.8. Situaciones que se producen con motivo de las transformaciones sociales </p>
+            <p class="IG_4">2.6.8.1. Imposibilidad de imputar pérdidas a los resultados de la empresa que se crea o subsiste </p>
+            <p class="IG_3">2.6.9. Cambio del régimen tributario en un mismo período </p>
+            <p class="IG_3">2.6.10. Término anticipado de giro </p>
+            <p class="IG_3">2.6.11. Presunción legal por término de giro </p>
+            <p class="IG_3">2.6.12. Efectos del término de giro </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_CapituloNumero">Capítulo VIII<br>La elusión tributaria</p>
+            <p class="IG_1">1. Antecedentes </p>
+            <p class="IG_1">2. Análisis </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_CapituloNumero">Capítulo IX<br>Normas generales del Código Tributario</p>
+            <p class="IG_1">1. Dictación del Código Tributario </p>
+            <p class="IG_1">2. Estructura del Código Tributario </p>
+            <p class="IG_1">3. Servicio de Impuestos Internos </p>
+            <p class="IG_2">3.1. Estructura del Servicio de Impuestos Internos </p>
+            <p class="IG_2">3.2. Organigrama del Servicio de Impuestos Internos </p>
+            <p class="IG_2">3.3. Personal del SII </p>
+            <p class="IG_1">4. Facultades del Director Nacional del SII </p>
+            <p class="IG_2">4.1. Facultades administrativas propiamente tales </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_1">5. Facultades de los Directores Regionales del SII </p>
+            <p class="IG_2">5.1. Absolver las consultas sobre la aplicación e interpretación de las normas tributarias, las que
+                serán tramitadas conforme a las mismas reglas a que se refiere el número 2, letra A, inciso segundo del presente
+                artículo </p>
+            <p class="IG_2">5.2. Solicitar la aplicación de apremios y pedir su renovación, en los casos a que se refiere el Título
+                I del Libro Segundo </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_2">5.3. Aplicar, rebajar, suspender o condonar las sanciones administrativas fijas o variables </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">5.4. Condonar total o parcialmente los intereses penales por la mora en el pago de los impuestos </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_2">5.5. Resolver administrativamente todos los asuntos de carácter tributario que se promuevan, incluso
+                corregir de oficio, en cualquier tiempo, los vicios o errores manifiestos en que se haya incurrido en las
+                resoluciones, liquidaciones o giros de impuestos </p>
+            <p class="IG_2">5.6. Disponer el cumplimiento administrativo de las sentencias dictadas por los Tribunales Tributarios y
+                Aduaneros, que incidan en materias de su competencia </p>
+            <p class="IG_2">5.7. Autorizar a otros funcionarios para resolver determinadas materias, aun las de su exclusiva
+                competencia, o para hacer uso de las facultades que le confiere el Estatuto Orgánico del Servicio, actuando por
+                “orden del Director Regional”, y encargarles, de acuerdo con las leyes y reglamentos, el cumplimiento de otras
+                funciones u obligaciones </p>
+            <p class="IG_2">5.8. Ordenar, a petición de los contribuyentes que se imputen al pago de sus impuestos o contribuciones
+                de cualquiera especie las cantidades que les deban ser devueltas por pagos en exceso de lo adeudado o no debido por
+                ellos </p>
+            <p class="IG_2">5.9. Disponer en las resoluciones que se dicten en conformidad a lo dispuesto en los números 5º y 6º de
+                la presente letra, la devolución y pago de las sumas solucionadas indebidamente o en exceso a título de impuestos,
+                reajustes, intereses, sanciones o costas </p>
+            <p class="IG_2">5.10. Ordenar la publicación o la notificación por avisos de cualquiera clase de resoluciones o disposiciones de orden general o particular </p>
+            <p class="IG_2">5.11. Las otras facultades conferidas por el Código Tributario, el Estatuto Orgánico del Servicio y las leyes vigentes </p>
+            <p class="IG_1">6. Contiendas de competencia </p>
+            <p class="IG_1">7. Ámbito de aplicación material del Código Tributario </p>
+            <p class="IG_2">7.1. Requisitos copulativos para que sean aplicadas las normas del Código Tributario </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_2">7.2. Aplicación restrictiva de sus normas </p>
+            <p class="IG_2">7.3. Aplicación supletoria del derecho común </p>
+            <p class="IG_1">8. Ámbito aplicación temporal de la ley tributaria </p>
+            <p class="IG_2">8.1. Regla general </p>
+            <p class="IG_2">8.2. Vigencia en la ley tributaria </p>
+            <p class="IG_3">8.2.1. Regla general </p>
+            <p class="IG_3">8.2.2. Principio de irretroactividad </p>
+            <p class="IG_4">8.2.2.1. Excepciones </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">8.2.3. Vigencia de las normas tributarias procesales </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_1">9. Ámbito de aplicación espacial </p>
+            <p class="IG_1">10. La comparecencia en el Servicio de Impuestos Internos </p>
+            <p class="IG_2">10.1. Concepto de comparecencia </p>
+            <p class="IG_2">10.2. Formas en que el contribuyente puede comparecer </p>
+            <p class="IG_3">10.2.1. Personalmente </p>
+            <p class="IG_3">10.2.2. Representado </p>
+            <p class="IG_3">10.2.3. Comparecencia de personas jurídicas </p>
+            <p class="IG_4">10.2.3.1. Corporaciones y fundaciones </p>
+            <p class="IG_4">10.2.3.2. Sociedades </p>
+            <p class="IG_4">10.2.3.3. Representación de las asociaciones gremiales </p>
+            <p class="IG_4">10.2.3.4. Representación de organizaciones comunitarias </p>
+            <p class="IG_4">10.2.3.5. Representación de las cooperativas </p>
+            <p class="IG_4">10.2.3.6. Representación de las municipalidades </p>
+            <p class="IG_4">10.2.3.7. Comparecencia de la asociación o cuentas en participación </p>
+            <p class="IG_4">10.2.3.8. Comparecencia de comunidades </p>
+            <p class="IG_4">10.2.3.9. Comparecencia de sociedades de hecho </p>
+            <p class="IG_2">10.3. Representación voluntaria </p>
+            <p class="IG_2">10.4. Comparecencia administrativa </p>
+            <p class="IG_2">10.5. Facultades del representante en el ámbito administrativo. </p>
+            <p class="IG_3">10.5.1. Representación conferida para actuaciones específicas </p>
+            <p class="IG_3">10.5.2. Representación general para las actuaciones ante el Servicio </p>
+            <p class="IG_2">10.6. Efectos de la representación </p>
+            <p class="IG_2">10.7. Comparecencia judicial </p>
+            <p class="IG_3">10.7.1. Facultades del representante en materia jurisdiccional </p>
+            <p class="IG_2">10.8. Extinción del título de la representación </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_1">11. Actuaciones del Servicio </p>
+            <p class="IG_2">11.1. Actuaciones administrativas </p>
+            <p class="IG_2">11.2. Oportunidad en que se deben realizar estas actuaciones: </p>
+            <p class="IG_3">11.2.1. Excepción </p>
+            <p class="IG_2">11.3. Expediente electrónico </p>
+            <p class="IG_1">12. Plazos </p>
+            <p class="IG_2">12.1. Plazo de caducidad </p>
+            <p class="IG_1">13. Notificaciones </p>
+            <p class="IG_2">13.1. Concepto de notificación </p>
+            <p class="IG_2">13.2. Importancia de las notificaciones </p>
+            <p class="IG_2">13.3. Clases de notificación </p>
+            <p class="IG_2">13.4. Normas comunes a las notificaciones </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_2">13.5. Tipos de notificaciones </p>
+            <p class="IG_3">13.5.1. Notificación personal </p>
+            <p class="IG_4">13.5.1.1. Constancia de la notificación personal </p>
+            <p class="IG_4">13.5.1.2. Forma de hacerla constar </p>
+            <p class="IG_3">13.5.2. Notificación por cédula </p>
+            <p class="IG_4">13.5.2.1. Etapas de la notificación por cédula </p>
+            <p class="IG_4">13.5.2.2. Casos en que la notificación debe hacerse por cédula </p>
+            <p class="IG_4">13.5.2.3. Forma de hacerla constar </p>
+            <p class="IG_3">13.5.3. Notificación por carta certificada </p>
+            <p class="IG_4">13.5.3.1. Cómputo de los plazos en las notificaciones por carta certificada </p>
+            <p class="IG_4">13.5.3.2. Constancia del envío de la carta certificada </p>
+            <p class="IG_4">13.5.3.3. Recepción de la carta certificada después de los tres días </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_4">13.5.3.4. Forma de hacerla constar </p>
+            <p class="IG_3">13.5.4. La notificación por aviso postal simple </p>
+            <p class="IG_3">13.5.5. La notificación por aviso en el Diario Oficial </p>
+            <p class="IG_4">13.5.5.1. Actuaciones del Servicio que deben publicarse en el Diario Oficial </p>
+            <p class="IG_4">13.5.5.2. Casos en que procede </p>
+            <p class="IG_3">13.5.6. Notificación por e-mail </p>
+            <p class="IG_4">13.5.6.1. Forma de efectuarla </p>
+            <p class="IG_4">13.5.6.2. Contenido </p>
+            <p class="IG_4">13.5.6.3. Efecto de esta notificación </p>
+            <p class="IG_4">13.5.6.4. Tenor del <span class="TextoI">e-mail</span></p>
+            <p class="IG_3">13.5.7. Notificación por aviso en página web </p>
+            <p class="IG_3">13.5.8. Notificación en el sitio personal del contribuyente </p>
+            <p class="IG_4">13.5.8.1. Forma de materializarla </p>
+            <p class="IG_4">13.5.8.2. Efecto </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_CapituloNumero">Capítulo X<br>Acción fiscalizadora <br />Límites y medios de fiscalización</p>
+            <p class="IG_1">1. Acción fiscalizadora </p>
+            <p class="IG_2">1.1. Límites a la fiscalización </p>
+            <p class="IG_3">1.1.1. Los derechos constitucionales de los contribuyentes </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">1.1.2. Los plazos de prescripción (artículos 59, 200, 201 y 202 del Código Tributario) </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">1.1.3. La reserva y el secreto bancario </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">1.1.4. El secreto profesional (artículo 61 del Código Tributario) </p>
+            <p class="IG_4">1.1.4.1. Concepto </p>
+            <p class="IG_4">1.1.4.2. Aplicación </p>
+            <p class="IG_4">1.1.4.3. Personas que están obligadas al secreto profesional </p>
+            <p class="IG_4">1.1.4.4. Alcance del secreto profesional </p>
+            <p class="IG_4">1.1.4.5. Sanción </p>
+            <p class="IG_3">1.1.5. Plazos de actuación </p>
+            <p class="IG_4">1.1.5.1. Requerimiento al contribuyente </p>
+            <p class="IG_4">1.1.5.2. Fecha de inicio del cómputo </p>
+            <p class="IG_4">1.1.5.3. Notificación del requerimiento </p>
+            <p class="IG_4">1.1.5.4. Fiscalización </p>
+            <p class="IG_4">1.1.5.5. Certificación </p>
+            <p class="IG_4">1.1.5.6. Plazo general para efectuar la fiscalización tributaria </p>
+            <p class="IG_4">1.1.5.7. Limitación para la revisión </p>
+            <p class="IG_4">1.1.5.8. Plazo de nueve meses para revisar </p>
+            <p class="IG_4">1.1.5.9. Aumento del plazo base de nueve meses </p>
+            <p class="IG_4">1.1.5.10. Procedimiento para fiscalizar otros impuestos en el marco de una revisión ya iniciada </p>
+            <p class="IG_4">1.1.5.11. Plazo ampliado para revisión </p>
+            <p class="IG_4">1.1.5.12. Efecto del vencimiento de plazo </p>
+            <p class="IG_3">1.1.6. Reserva tributaria </p>
+            <p class="IG_1">2. Medios de fiscalización </p>
+            <p class="IG_2">2.1. La información </p>
+            <p class="IG_3">2.1.1. Fuente interna de información - Declaraciones Juradas y formularios de impuestos. </p>
+            <p class="IG_3">2.1.2. Fuente Interna de información: Obligación de emisión </p>
+            <p class="IG_3">2.1.3. Obligación de Informar </p>
+            <p class="IG_3">2.1.4. Fuente externa de información </p>
+            <p class="IG_3">2.1.5. Derecho Comparado </p>
+            <p class="IG_4">2.1.5.1. España </p>
+            <p class="IG_4">2.1.5.2. Perú </p>
+            <p class="IG_4">2.1.5.3. Argentina </p>
+            <p class="IG_3">2.1.6. La tecnología y la información </p>
+            <p class="IG_4">2.1.6.1. En el Impuesto a la Renta, un plan masivo denominado Operación Renta </p>
+            <p class="IG_4">2.1.6.2. Registro histórico </p>
+            <p class="IG_4">2.1.6.3. Información sobre comercio exterior </p>
+            <p class="IG_2">2.2. Exigencia del RUT </p>
+            <p class="IG_3">2.2.1. No deben obtener cédula RUT </p>
+            <p class="IG_2">2.3. Declaración de iniciación de actividades </p>
+            <p class="IG_3">2.3.1. No están obligados a dar el aviso de Inicio de Actividades </p>
+            <p class="IG_3">2.3.2. Obligados a dar aviso de Inicio de Actividades </p>
+            <p class="IG_3">2.3.3. Sujetos que deben inscribirse en el RUT y dar simultáneamente el aviso de Inicio de Actividades</p>
+            <p class="IG_3">2.3.4. Domicilio postal </p>
+            <p class="IG_3">2.3.5. Correo electrónico </p>
+            <p class="IG_2">2.4. Revisión y confección de inventarios </p>
+            <p class="IG_3">2.4.1. Examinar los inventarios </p>
+            <p class="IG_2">2.5. La citación </p>
+            <p class="IG_3">2.5.1. Fundamento legal </p>
+            <p class="IG_3">2.5.2. Finalidades de la citación </p>
+            <p class="IG_3">2.5.3. Contenido y efecto de la citación </p>
+            <p class="IG_3">2.5.4. Unidad responsable </p>
+            <p class="IG_3">2.5.5. Procedencia de la citación </p>
+            <p class="IG_3">2.5.6. La citación como trámite obligatorio </p>
+            <p class="IG_4">2.5.6.1. Casos en que esta diligencia está concebida con carácter de obligatorio </p>
+            <p class="IG_4">2.5.6.2. Efectos de la omisión de la citación cuando ella es obligatoria </p>
+            <p class="IG_3">2.5.7. Formalidades de la citación </p>
+            <p class="IG_4">2.5.7.1. Plazo de la citación </p>
+            <p class="IG_4">2.5.7.2. Notificación </p>
+            <p class="IG_4">2.5.7.3. Requisitos para que se amplíe el plazo para comparecer </p>
+            <p class="IG_4">2.5.7.4. Contestación de la citación </p>
+            <p class="IG_3">2.5.8. Posición del contribuyente ante la citación </p>
+            <p class="IG_3">2.5.9. Efectos de la citación </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">2.6. Examen de operaciones bancarias </p>
+            <p class="IG_3">2.6.1. Por actividades de fiscalización interna </p>
+            <p class="IG_3">2.6.2. Desarrollo </p>
+            <p class="IG_3">2.6.3. Procedimiento </p>
+            <p class="IG_3">2.6.4. Característica de la información que se entrega </p>
+            <p class="IG_3">2.6.5. Procedimiento de requerimiento de información </p>
+            <p class="IG_3">2.6.6. Por actividades de fiscalización externas </p>
+            <p class="IG_4">2.6.6.1. Requisitos de la información requerida </p>
+            <p class="IG_4">2.6.6.2. Forma de entrega de la información y limitación de plazo </p>
+            <p class="IG_4">2.6.6.3. Infracción por incumplimiento </p>
+            <p class="IG_4">2.6.6.4. Reserva de la información entregada </p>
+            <p class="IG_4">2.6.6.5. Interpretación </p>
+            <p class="IG_2">2.7. Declaración jurada </p>
+            <p class="IG_2">2.8. Examinar la Contabilidad </p>
+            <p class="IG_2">2.9. Incautar </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">2.10. Facultad de tasar </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_2">2.11. Acciones de fiscalización en terreno </p>
+            <p class="IG_3">2.11.1. Control de la emisión y registro de documentos </p>
+            <p class="IG_3">2.11.2. Controles puerta a puerta </p>
+            <p class="IG_3">2.11.3. Puntos fijos </p>
+            <p class="IG_3">2.11.4. Empadronamientos </p>
+            <p class="IG_3">2.11.5. Captura de información </p>
+            <p class="IG_3">2.11.6. Tasación de negocios esporádicos </p>
+            <p class="IG_3">2.11.7. Controles carreteros </p>
+            <p class="IG_3">2.11.8. Controles móviles </p>
+            <p class="IG_3">2.11.9. Presencia mayorista </p>
+            <p class="IG_3">2.11.10. Fiscalización de expendedoras de combustibles y puntos industriales </p>
+            <p class="IG_3">2.11.11. Acciones de fiscalización </p>
+            <p class="IG_2">2.12. Resultado de la fiscalización </p>
+            <p class="IG_2">2.13. Auditorías tributarias </p>
+            <p class="IG_3">2.13.1. Inicio </p>
+            <p class="IG_3">2.13.2. Objetivo de la auditoría tributaria </p>
+            <p class="IG_3">2.13.3. Tipos de auditorías tributarias </p>
+            <p class="IG_3">2.13.4. Asignación </p>
+            <p class="IG_3">2.13.5. Actividades previas a la auditoría </p>
+            <p class="IG_3">2.13.6. Desarrollo </p>
+            <p class="IG_3">2.13.7. Procedimiento </p>
+            <p class="IG_3">2.13.8. Resultados de la auditoría </p>
+            <p class="IG_3">2.13.9. Procedimiento de auditoría por caso conexo </p>
+            <p class="IG_3">2.13.10. Dirección Grandes Contribuyentes </p>
+            <p class="IG_2">2.14. Medidas de control y preventivas </p>
+            <p class="IG_2">2.15. Medidas preventivas y de colaboración </p>
+            <p class="IG_2">2.16. Término de giro </p>
+            <p class="IG_3">2.16.1. Plazo del Servicio de Impuestos Internos </p>
+            <p class="IG_3">2.16.2. Plazo para revisar con base en nuevos antecedentes </p>
+            <p class="IG_3">2.16.3. Contribuyentes sin cobertura de internet </p>
+            <p class="IG_3">2.16.4. Efectos del término de giro </p>
+            <p class="IG_3">2.16.5. Excepciones al término de giro </p>
+            <p class="IG_3">2.16.6. Cambio de giro y cambio de régimen tributario </p>
+            <p class="IG_3">2.16.7. Término de giro de oficio por el Servicio </p>
+            <p class="IG_3">2.16.8. Presunción por término de giro </p>
+            <p class="IG_1">3. Normas contables </p>
+            <p class="IG_2">3.1. Contabilidad fidedigna </p>
+            <p class="IG_3">3.1.1. Concepto </p>
+            <p class="IG_2">3.2. Contabilidad completa </p>
+            <p class="IG_3">3.2.1. Concepto </p>
+            <p class="IG_4">3.2.1.1. Libro diario </p>
+            <p class="IG_4">3.2.1.2. Libro mayor </p>
+            <p class="IG_4">3.2.1.3. Libro de inventarios y balances </p>
+            <p class="IG_4">3.2.1.4. Libro auxiliar de remuneraciones </p>
+            <p class="IG_4">3.2.1.5. Libro de compras y ventas </p>
+            <p class="IG_4">3.2.1.6. Libro FUT </p>
+            <p class="IG_4">3.2.1.7. Registros empresariales </p>
+            <p class="IG_2">3.3. Contabilidad simplificada </p>
+            <p class="IG_2">3.4. Forma en que deben llevarse los libros contables </p>
+            <p class="IG_2">3.5. Contabilidad computacional </p>
+            <p class="IG_3">3.5.1. Conceptos previos </p>
+            <p class="IG_3">3.5.2. Requisitos </p>
+            <p class="IG_3">3.5.3. Formalidades </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_2">3.6. Cambio de sistema contable </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_2">3.7. Infracciones tributarias vinculadas a la contabilidad </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+                    
+            <p id="tomoII" class="IG_Tomo">Tomo II</p>
+            <p class="IG_CapituloNumero">Capítulo XI<br>Infracciones tributarias</p>
+            <p class="IG_1">1. Concepto </p>
+            <p class="IG_1">2. Clasificación de las infracciones tributarias </p>
+            <p class="IG_1">3. Infracciones civiles </p>
+            <p class="IG_2">3.1. Concepto </p>
+            <p class="IG_2">3.2. Interés </p>
+            <p class="IG_3">3.2.1. Caso en que no aplican los reajustes ni los intereses </p>
+            <p class="IG_3">3.2.2. Convenios de pago </p>
+            <p class="IG_2">3.3. Multas </p>
+            <p class="IG_2">3.4. Condonaciones </p>
+            <p class="IG_3">3.4.1. Condonación por multas asociadas al incumplimiento de la obligación de pago </p>
+            <p class="IG_3">3.4.2. Condonación de los intereses penales </p>
+            <p class="IG_3">3.4.2.1. La condonación total resulta, sin embargo, obligatoria </p>
+            <p class="IG_2">3.5. Características de las infracciones civiles </p>
+            <p class="IG_1">4. Infracciones administrativas </p>
+            <p class="IG_2">4.1. Concepto </p>
+            <p class="IG_2">4.2. Características de las infracciones administrativas </p>
+            <p class="IG_2">4.3. Condonación de sanciones administrativas </p>
+            <p class="IG_2">4.4. Constituyen infracciones administrativas </p>
+            <p class="IG_3">4.4.1. Artículo 97 Nº 1 </p>
+            <p class="IG_3">4.4.1.1. Requisitos del tipo contenido en el inciso primero </p>
+            <p class="IG_3">4.4.1.2. Requisitos del tipo contenido en el inciso segundo </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">4.4.2. Artículo 97 Nº 2 </p>
+            <p class="IG_3">4.4.2.1. Requisitos del tipo </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_3">4.4.3. Artículo 97 Nº 3 </p>
+            <p class="IG_3">4.4.3.1. Requisitos del tipo </p>
+            <p class="IG_3">4.4.4. Artículo 97 Nº 6 </p>
+            <p class="IG_3">4.4.4.1. Requisitos del tipo infraccional contenido en el artículo 97 Nº 6 inciso primero </p>
+            <p class="IG_3">4.4.4.2. Requisitos del tipo infraccional contenido en el artículo 97 Nº 6 inciso segundo </p>
+            <p class="IG_3">4.4.4.3. Requisitos del tipo infraccional contenido en el artículo 97 Nº 6 inciso tercero </p>
+            <p class="IG_3">4.4.5. Artículo 97 Nº 7 </p>
+            <p class="IG_3">4.4.5.1. Requisitos del tipo </p>
+            <p class="IG_3">4.4.6. Artículo 97 Nº 10 </p>
+            <p class="IG_3">4.4.6.1. Requisitos del tipo infraccional sancionado en el Nº 10 del artículo 97 del Código Tributario
+            </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">4.4.7. Artículo 97 Nº 11 </p>
+            <p class="IG_3">4.4.7.1. Requisitos del tipo infraccional sancionado en el Nº 11 </p>
+            <p class="IG_3">4.4.8. Artículo 97 Nº 15 </p>
+            <p class="IG_3">4.4.8.1. Requisitos del tipo infraccional sancionado en el artículo 97 Nº 15 </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">4.4.9. Artículo 97 Nº 16 </p>
+            <p class="IG_3">4.4.9.1. Requisitos del primer tipo infraccional </p>
+            <p class="IG_3">4.4.9.2. Requisitos del segundo tipo infraccional </p>
+            <p class="IG_3">4.4.9.3. Requisitos del tercer tipo infraccional </p>
+            <p class="IG_3">4.4.9.4. Obligación común en todos los tipos infraccionales contenidos en el artículo 97 Nº 16 </p>
+            <p class="IG_3">4.4.9.5. Requisitos del cuarto tipo infraccional </p>
+            <p class="IG_3">4.4.9.6. Procedimiento que debe seguirse para informar la pérdida o inutilización </p>
+            <p class="IG_3">4.4.9.7. Efecto de la pérdida o inutilización de los libros contables </p>
+            <p class="IG_5">Jurisprudencia administrativa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">4.4.10. Artículo 97 Nº 17 </p>
+            <p class="IG_3">4.4.10.1. Requisitos del tipo infraccional contenido en el artículo 97 Nº 17 del Código Tributario </p>
+            <p class="IG_3">4.4.11. Artículo 97 Nº 19 </p>
+            <p class="IG_3">4.4.11.1. Requisitos del tipo infraccional contenido en el artículo 97 Nº 11 </p>
+            <p class="IG_3">4.4.12. Artículo 97 Nº 20 </p>
+            <p class="IG_3">4.4.12.1. Requisitos del primer tipo infraccional contenido en el artículo 97 Nº 20 </p>
+            <p class="IG_3">4.4.12.2. La reiteración como elemento de tipicidad </p>
+            <p class="IG_3">4.4.12.3. Requisitos del segundo tipo infraccional contenido en el artículo 97 Nº 20 </p>
+            <p class="IG_3">4.4.12.4. Procedimiento </p>
+            <p class="IG_3">4.4.13. Artículo 97 Nº 21 </p>
+            <p class="IG_3">4.4.13.1. Requisitos del tipo infraccional </p>
+            <p class="IG_3">4.4.14. Infracción genérica. Artículo 109 </p>
+            <p class="IG_3">4.4.14.1. Requisitos del tipo infraccional contenido en el artículo 109 del Código Tributario </p>
+            <p class="IG_3">4.4.15. Consideración general respecto de las multas que se aplican a las infracciones administrativas
+            </p>
+            <p class="IG_1">5. Infracciones penales </p>
+            <p class="IG_2">5.1. Concepto: </p>
+            <p class="IG_2">5.2. Características de las infracciones penales </p>
+            <p class="IG_2">5.3. Bien Jurídico protegido en los delitos tributarios </p>
+            <p class="IG_2">5.4. La tipicidad en los delitos tributarios </p>
+            <p class="IG_2">5.5. Tipo penal </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_2">5.6. Constituyen delitos tributarios </p>
+            <p class="IG_3">5.6.1. Artículo 97 Nº 4 </p>
+            <p class="IG_4">5.6.1.1. Requisitos del primer tipo penal contenido en el inciso primero del artículo 97 Nº 4 </p>
+            <p class="IG_4">5.6.1.2. Requisitos del segundo tipo penal contenido en el inciso segundo del artículo 97 Nº 4 </p>
+            <p class="IG_4">5.6.1.3. Requisitos del tercer tipo penal contenido en el inciso tercero del artículo 97 Nº 4 </p>
+            <p class="IG_4">5.6.1.4. Requisitos del cuarto tipo penal contenido en el último inciso del artículo 97 Nº 4 </p>
+            <p class="IG_4">5.6.1.5. Requisitos comunes en todos los tipos penales sancionados por el artículo 97 Nº 4 </p>
+            <p class="IG_4">5.6.1.6. Concurso en los delitos tributarios </p>
+            <p class="IG_4">5.6.1.7. Circunstancia agravante específica de los tipos penales contenidos en el inciso primero,
+                segundo y tercero del artículo 97 Nº 4 </p>
+            <p class="IG_4">5.6.1.8. Caso Penta </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">5.6.2. Artículo 97 Nº 5 </p>
+            <p class="IG_4">5.6.2.1. Requisitos del tipo penal contenido en el Nº 5 del artículo 97 </p>
+            <p class="IG_3">5.6.3. Artículo 97 Nº 8 </p>
+            <p class="IG_4">5.6.3.1. Requisitos del tipo penal contenido en el artículo 97 Nº 8 del Código Tributario </p>
+            <p class="IG_3">5.6.4. Artículo 97 Nº 9 </p>
+            <p class="IG_4">5.6.4.1. Requisitos del tipo penal contenido en el artículo 97 Nº 9 del Código Tributario </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">5.6.5. Artículo 97 Nº 12 </p>
+            <p class="IG_4">5.6.5.1. Requisitos del tipo penal sancionado en el artículo 97 Nº 12 </p>
+            <p class="IG_3">5.6.6. Artículo 97 Nº 13 </p>
+            <p class="IG_4">5.6.6.1. Requisitos del tipo penal sancionado en el artículo 97 Nº 13 </p>
+            <p class="IG_4">5.6.6.2. Presunción de responsabilidad </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">5.6.7. Artículo 97 Nº 14 </p>
+            <p class="IG_4">5.6.7.1. Requisitos del tipo contenidos en la primera parte </p>
+            <p class="IG_4">5.6.7.2. Requisitos del tipo contenidos en la segunda parte del artículo 97 Nº 14 </p>
+            <p class="IG_3">5.6.8. Artículo 97 Nº 18 </p>
+            <p class="IG_3">5.6.9. Artículo 97 Nº 22 </p>
+            <p class="IG_4">5.6.9.1. Requisitos del tipo penal contenido en el Nº 22 del artículo 97 </p>
+            <p class="IG_3">5.6.10. Artículo 97 Nº 23 </p>
+            <p class="IG_4">5.6.10.1. Requisitos del tipo contenidos en el inciso primero </p>
+            <p class="IG_4">5.6.10.2. Requisitos del tipo contenidos en el inciso segundo del artículo 97 Nº 23 </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">5.6.11. Artículo 97 Nº 24 </p>
+            <p class="IG_4">5.6.11.1. Requisitos del tipo penal contenidos en el inciso primero del artículo 97 Nº 24 </p>
+            <p class="IG_4">5.6.11.2. Requisitos del tipo penal contenidos en el inciso segundo del artículo 97 Nº 24 </p>
+            <p class="IG_4">5.6.11.3. Requisitos del tipo penal contenidos en el inciso tercero del artículo 97 Nº 24 </p>
+            <p class="IG_4">5.6.11.4. Comentario común </p>
+            <p class="IG_3">5.6.12. Artículo 97 Nº 25 </p>
+            <p class="IG_4">5.6.12.1. Requisitos del tipo contenidos en el inciso primero del artículo 97 Nº 25 </p>
+            <p class="IG_4">5.6.12.2. Requisitos del tipo contenidos en el inciso segundo del artículo 97 Nº 25 </p>
+            <p class="IG_3">5.6.13. Artículo 97 Nº 26 </p>
+            <p class="IG_4">5.6.13.1. Requisitos del tipo penal sancionado en el artículo 97 Nº 26 </p>
+            <p class="IG_1">6. Infracciones cometidas por el contribuyente </p>
+            <p class="IG_1">7. Infracciones cometidas por el contador </p>
+            <p class="IG_2">7.1. Requisitos del tipo infraccional aplicable al contador </p>
+            <p class="IG_2">7.2. Eximente de responsabilidad especial para esta infracción </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_1">8. Infracción cometida por el asesor tributario </p>
+            <p class="IG_1">9. Infracciones cometidas por funcionarios del Servicio </p>
+            <p class="IG_1">10. Infracciones cometidas por otros funcionarios públicos o municipales </p>
+            <p class="IG_1">11. Infracciones cometidas por Notarios, Conservadores y otras infracciones genéricas </p>
+            <p class="IG_1">12. Consideraciones generales </p>
+            <p class="IG_2">12.1. Circunstancias que deben ponderarse para la aplicación de las sanciones administrativas o penales
+            </p>
+            <p class="IG_3">12.1.1. Sanciones pecuniarias aplicadas por el Director Regional </p>
+            <p class="IG_3">12.1.2. Sanciones administrativas fijadas por el Servicio o los Tribunales Tributarios y Aduaneros (TTA)
+            </p>
+            <p class="IG_3">12.1.3. Sanciones penales impuestas por el Tribunal Oral en lo Penal </p>
+            <p class="IG_CapituloNumero">Capítulo XII<br>Procedimientos tributarios</p>
+            <p class="IG_1">Ley Nº 20.322 </p>
+            <p class="IG_1">1. Historia de la Ley Nº 20.322 </p>
+            <p class="IG_1">2. Proyecto primitivo </p>
+            <p class="IG_3">2.1.1. Especialización de las Cortes de Apelaciones en materias tributarias </p>
+            <p class="IG_3">2.1.2. Aumento del número de ministros en algunas Cortes de Apelaciones </p>
+            <p class="IG_3">2.1.3. Agilización de la tramitación de las causas en la segunda instancia </p>
+            <p class="IG_3">2.1.4. Creación de Tribunales Tributarios de primera instancia, independientes de la Administración </p>
+            <p class="IG_3">2.1.5. Idoneidad y nombramiento del personal del Tribunal Tributario </p>
+            <p class="IG_3">2.1.6. Independencia del Tribunal Tributario </p>
+            <p class="IG_4">2.1.6.1. Fórmula mixta de designación </p>
+            <p class="IG_4">2.1.6.2. Libertad para interpretar los hechos de la causa y el derecho aplicable </p>
+            <p class="IG_4">2.1.6.3. Independencia y sometimiento a la supervigilancia directiva, correccional y económica de la
+                Corte de Apelaciones respectiva </p>
+            <p class="IG_4">2.1.6.4. Inhabilidades y prohibiciones </p>
+            <p class="IG_4">2.1.6.5. Apoyo en recursos humanos y materiales </p>
+            <p class="IG_4">2.1.6.6. Acceso a la carrera judicial por parte de los Jueces Tributarios </p>
+            <p class="IG_3">2.1.7. Etapa de reconsideración administrativa obligatoria, en forma previa al reclamo jurisdiccional
+            </p>
+            <p class="IG_3">2.1.8. Procedimientos judiciales eficientes y expeditos </p>
+            <p class="IG_3">2.1.9. Aplicación gradual de la reforma </p>
+            <p class="IG_1">3. Indicación sustitutiva - Antecedente Ley Nº 20.322 </p>
+            <p class="IG_2">3.1. Fortalecimiento de la independencia de los tribunales que se crean </p>
+            <p class="IG_2">3.2. Ampliación de la competencia a materias aduaneras </p>
+            <p class="IG_2">3.3. Administración y gestión de los Tribunales Tributarios y Aduaneros </p>
+            <p class="IG_2">3.4. Nombramiento de los jueces </p>
+            <p class="IG_2">3.5. Distribución geográfica de los tribunales </p>
+            <p class="IG_2">3.6. Adecuaciones al procedimiento </p>
+            <p class="IG_3">3.6.1. Defensa letrada </p>
+            <p class="IG_3">3.6.2. Recurso especial de amparo al contribuyente </p>
+            <p class="IG_3">3.6.3. Implementación gradual </p>
+            <p class="IG_3">3.6.4. Personal calificado </p>
+            <p class="IG_CapituloNumero">Capítulo XIII<br>Procedimientos infraccionales tributarios</p>
+            <p class="IG_1">1. Procedimientos regulados por el Código Tributario </p>
+            <p class="IG_2">1.1. Primera instancia </p>
+            <p class="IG_2">1.2. Segunda instancia </p>
+            <p class="IG_3">1.2.1. Regla general </p>
+            <p class="IG_3">1.2.2. Regla especial </p>
+            <p class="IG_3">1.2.3. Intervención de la Corte Suprema </p>
+            <p class="IG_3">1.2.4. Intervención del Tribunal Constitucional </p>
+            <p class="IG_1">2. Procedimientos sancionatorios </p>
+            <p class="IG_2">2.1. Procedimiento sancionatorio general </p>
+            <p class="IG_3">2.1.1. Materias en que se aplica </p>
+            <p class="IG_3">2.1.2. Procedimiento </p>
+            <p class="IG_4">2.1.2.1. Acta y notificación </p>
+            <p class="IG_4">2.1.2.2. Traslado para defensa </p>
+            <p class="IG_4">2.1.2.3. Medidas conservativas </p>
+            <p class="IG_4">2.1.2.4. Traslado al Servicio </p>
+            <p class="IG_4">2.1.2.5. Notificaciones </p>
+            <p class="IG_4">2.1.2.6. Prueba </p>
+            <p class="IG_4">2.1.2.7. Sentencia </p>
+            <p class="IG_4">2.1.2.8. Recursos </p>
+            <p class="IG_4">2.1.2.9. Exclusión </p>
+            <p class="IG_4">2.1.2.10. Aplicación supletoria </p>
+            <p class="IG_4">2.1.2.11. Decisión privativa del Director Nacional del Servicio </p>
+            <p class="IG_1">3. Procedimiento Sancionatorio Especial </p>
+            <p class="IG_2">3.1. Materias a las que se aplica </p>
+            <p class="IG_2">3.2. Procedimiento </p>
+            <p class="IG_3">3.2.1. Determinación del acto reclamado en ciertas infracciones </p>
+            <p class="IG_3">3.2.2. Notificación del acto reclamado </p>
+            <p class="IG_3">3.2.3. Derecho del contribuyente Pyme acogido a la cláusula transparencia </p>
+            <p class="IG_3">3.2.4. Reclamo </p>
+            <p class="IG_3">3.2.5. Traslado al Servicio </p>
+            <p class="IG_3">3.2.6. Prueba </p>
+            <p class="IG_3">3.2.7. Sentencia </p>
+            <p class="IG_3">3.2.8. Recursos </p>
+            <p class="IG_3">3.2.9. Aplicación supletoria </p>
+            <p class="IG_3">3.2.10. Se exige defensa letrada </p>
+            <p class="IG_3">3.2.11. Compatibilidad de procedimiento </p>
+            <p class="IG_3">3.2.12. Efecto del reclamo interpuesto contra la infracción del Nº 20 del artículo 97 </p>
+            <p class="IG_CapituloNumero">Capítulo XIV<br>Procedimiento general de reclamo</p>
+            <p class="IG_1">1. Procedimiento General de Reclamo </p>
+            <p class="IG_2">1.1. Derecho general </p>
+            <p class="IG_2">1.2. Características de este procedimiento </p>
+            <p class="IG_2">1.3. Procedimiento </p>
+            <p class="IG_3">1.3.1. Reclamante </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">1.3.2. Materias reclamables: (artículo 124 del Código Tributario) </p>
+            <p class="IG_4">1.3.2.1. La totalidad o de algunas de las partidas o elementos de una liquidación </p>
+            <p class="IG_5">1.3.2.1.1. Concepto </p>
+            <p class="IG_5">1.3.2.1.2. Formalidades o requisitos </p>
+            <p class="IG_5">1.3.2.1.3. Funciones de la liquidación </p>
+            <p class="IG_5">1.3.2.1.4. Oportunidad en que debe practicarse la liquidación </p>
+            <p class="IG_5">1.3.2.1.5. Efectos de la liquidación cuando está notificada legalmente </p>
+            <p class="IG_4">1.3.2.2. La totalidad o de algunas de las partidas o elementos de un giro </p>
+            <p class="IG_5">1.3.2.2.1. Concepto de giro </p>
+            <p class="IG_5">1.3.2.2.2. Requisitos del giro </p>
+            <p class="IG_5">1.3.2.2.3. Efectos del giro notificado legalmente </p>
+            <p class="IG_5">1.3.2.2.4. Oportunidad en que pueden girarse los impuestos </p>
+            <p class="IG_4">1.3.2.3. La totalidad o parte de un pago </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">1.3.3. Materias no reclamables </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">1.3.4. Ante quién se reclama </p>
+            <p class="IG_3">1.3.5. Lugar en que se presenta el reclamo </p>
+            <p class="IG_3">1.3.6. Plazo para reclamar (artículo 124 inciso 3º Código Tributario) </p>
+            <p class="IG_4">1.3.6.1. Plazo general </p>
+            <p class="IG_4">1.3.6.2. Plazo especial para reclamar </p>
+            <p class="IG_3">1.3.7. Requisitos que debe cumplir el reclamo </p>
+            <p class="IG_3">1.3.8. La representación en la tramitación del reclamo </p>
+            <p class="IG_4">1.3.8.1. Reglas particulares </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">1.3.9. Resolución que recae en el escrito de reclamo </p>
+            <p class="IG_3">1.3.10. Recursos procesales </p>
+            <p class="IG_3">1.3.11. Participación del Servicio de Impuestos Internos como “parte” del proceso </p>
+            <p class="IG_3">1.3.12. Forma de llevar el expediente y su acceso </p>
+            <p class="IG_3">1.3.13. Derecho del contribuyente de rectificar declaraciones o pagos de impuestos correspondientes al
+                período reliquidado. Artículo 127 del Código Tributario </p>
+            <p class="IG_3">1.3.14. Traslado </p>
+            <p class="IG_4">1.3.14.1. Requisitos de la contestación </p>
+            <p class="IG_4">1.3.14.2. Notificaciones </p>
+            <p class="IG_4">1.3.14.3. Medidas cautelares </p>
+            <p class="IG_5">1.3.14.3.1. Requisitos </p>
+            <p class="IG_5">1.3.14.3.2. Contenido de la resolución </p>
+            <p class="IG_5">1.3.14.3.3. Característica de la medida </p>
+            <p class="IG_5">1.3.14.3.4. Tramitación </p>
+            <p class="IG_5">1.3.14.3.5. Recursos </p>
+            <p class="IG_3">1.3.15. Etapa de prueba </p>
+            <p class="IG_4">1.3.15.1. Características de este plazo </p>
+            <p class="IG_4">1.3.15.2. Resolución que ordena recibir la causa a prueba </p>
+            <p class="IG_4">1.3.15.3. Contenido del “Auto de Prueba” </p>
+            <p class="IG_4">1.3.15.4. Notificación del “Auto de Prueba” </p>
+            <p class="IG_4">1.3.15.5. Recurso que procede en contra del “Auto de Prueba” </p>
+            <p class="IG_4">1.3.15.6. Medios de prueba </p>
+            <p class="IG_4">1.3.15.7. Limitación probatoria </p>
+            <p class="IG_4">1.3.15.8. Ampliación del probatorio </p>
+            <p class="IG_4">1.3.15.9. Observaciones a la prueba </p>
+            <p class="IG_4">1.3.15.10. Valor de la prueba </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">1.3.16. Conciliación </p>
+            <p class="IG_4">1.3.16.1. Materia de conciliación </p>
+            <p class="IG_4">1.3.16.2. Limitación de la conciliación </p>
+            <p class="IG_4">1.3.16.3. Audiencias </p>
+            <p class="IG_4">1.3.16.4. Oportunidad </p>
+            <p class="IG_4">1.3.16.5. No aplica la conciliación </p>
+            <p class="IG_4">1.3.16.6. Facultad del Tribunal </p>
+            <p class="IG_4">1.3.16.7. Posición de la defensa del Servicio </p>
+            <p class="IG_4">1.3.16.8. Obligación del Director </p>
+            <p class="IG_4">1.3.16.9. Acta </p>
+            <p class="IG_4">1.3.16.10. Aprobación del acta </p>
+            <p class="IG_4">1.3.16.11. Recursos </p>
+            <p class="IG_3">1.3.17. Avenimiento extrajudicial </p>
+            <p class="IG_4">1.3.17.1. Oportunidad </p>
+            <p class="IG_4">1.3.17.2. Limitación del acuerdo </p>
+            <p class="IG_4">1.3.17.3. Recibida la propuesta </p>
+            <p class="IG_4">1.3.17.4. Gestión previa </p>
+            <p class="IG_4">1.3.17.5. Plazo </p>
+            <p class="IG_4">1.3.17.6. Acuerdo favorable </p>
+            <p class="IG_4">1.3.17.7. Publicidad </p>
+            <p class="IG_3">1.3.18. Etapa de sentencia </p>
+            <p class="IG_4">1.3.18.1. Sentencia definitiva </p>
+            <p class="IG_4">1.3.18.2. Notificación de la sentencia </p>
+            <p class="IG_4">1.3.18.3. Recursos que proceden en contra de la sentencia definitiva pronunciada por el tribunal
+                tributario </p>
+            <p class="IG_5">1.3.18.3.1. Procedimiento </p>
+            <p class="IG_5">1.3.18.3.2. Tramitación del recurso </p>
+            <p class="IG_5">1.3.18.3.3. Recurso de casación </p>
+            <p class="IG_5">1.3.18.3.4. Derecho a reclamar sin obligación de pagar </p>
+            <p class="IG_5">1.3.18.3.5. Pago con reclamo pendiente </p>
+            <p class="IG_5">1.3.18.3.6. Suspensión de cobro </p>
+            <p class="IG_5">1.3.18.3.7. Derecho del apelante de pedir suspensión del cobro de los impuestos (artículo 147, incisos
+                6º y 7º del Código Tributario) </p>
+            <p class="IG_5">1.3.18.3.8. Giro </p>
+            <p class="IG_3">1.3.19. Recursos contra el fallo de la Corte de Apelaciones </p>
+            <p class="IG_4">1.3.19.1. Recurso de casación en la forma </p>
+            <p class="IG_5">1.3.19.1.1. Requisito de admisibilidad del recurso de casación en la forma </p>
+            <p class="IG_4">1.3.19.2. Recurso de casación en el fondo </p>
+            <p class="IG_4">1.3.19.3. Plazo </p>
+            <p class="IG_4">1.3.19.4. Lugar de presentación de los recursos </p>
+            <p class="IG_4">1.3.19.5. Requisitos del recurso de casación de fondo </p>
+            <p class="IG_4">1.3.19.6. Efectos de su interposición </p>
+            <p class="IG_4">1.3.19.7. Tramitación </p>
+            <p class="IG_4">1.3.19.8. Conocimiento por el pleno </p>
+            <p class="IG_4">1.3.19.9. Vista de la causa </p>
+            <p class="IG_4">1.3.19.10. Invalidación por casación de fondo </p>
+            <p class="IG_4">1.3.19.11. Invalidación por casación de forma </p>
+            <p class="IG_4">1.3.19.12. Trámites esenciales primera instancia </p>
+            <p class="IG_4">1.3.19.13. Trámites esenciales en segunda instancia </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_3">1.3.20. Etapa de cumplimiento </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_CapituloNumero">Capítulo XV<br>Procedimientos especiales de reclamación tributaria</p>
+            <p class="IG_1">1. Procedimiento de declaración judicial de la existencia de abuso o simulación y de la determinación de
+                la responsabilidad respectiva </p>
+            <p class="IG_2">1.1. Antecedentes </p>
+            <p class="IG_2">1.2. Plazos para la presentación del requerimiento </p>
+            <p class="IG_2">1.3. Competencia </p>
+            <p class="IG_2">1.4. Solicitud </p>
+            <p class="IG_3">1.4.1. Requisitos de la solicitud </p>
+            <p class="IG_2">1.5. Tramitación </p>
+            <p class="IG_3">1.5.1. Plazo </p>
+            <p class="IG_3">1.5.2. Audiencia de descargos </p>
+            <p class="IG_3">1.5.3. Antecedentes aportados </p>
+            <p class="IG_3">1.5.3.1. Traslado </p>
+            <p class="IG_2">1.6. Prueba </p>
+            <p class="IG_3">1.6.1. Término probatorio </p>
+            <p class="IG_3">1.6.2. Recursos </p>
+            <p class="IG_3">1.6.3. Observaciones a la prueba </p>
+            <p class="IG_3">1.6.4. Valoración de la prueba </p>
+            <p class="IG_2">1.7. Sentencia </p>
+            <p class="IG_3">1.7.1. Sanción </p>
+            <p class="IG_2">1.8. Recursos </p>
+            <p class="IG_3">1.8.1. Tramitación </p>
+            <p class="IG_2">1.9. Cumplimiento </p>
+            <p class="IG_2">1.10. Aplicación supletoria </p>
+            <p class="IG_1">2. Procedimiento de reclamo de avalúo de bienes raíces </p>
+            <p class="IG_2">2.1. Tribunal Competente </p>
+            <p class="IG_3">2.1.1. Primera instancia </p>
+            <p class="IG_3">2.1.2. Segunda instancia </p>
+            <p class="IG_2">2.2. Características del procedimiento de reclamo </p>
+            <p class="IG_2">2.3. Causales de reclamación </p>
+            <p class="IG_2">2.4. Peticiones administrativas de la revisión de avalúos </p>
+            <p class="IG_3">2.4.1. Sujetos de la reclamación </p>
+            <p class="IG_3">2.4.2. Plazo </p>
+            <p class="IG_3">2.4.3. Plazo especial </p>
+            <p class="IG_2">2.4.4. Causales de modificación de los avalúos por el Servicio de Impuestos Internos </p>
+            <p class="IG_3">2.5. Reposición Administrativa </p>
+            <p class="IG_3">2.5.1. Efectos de su presentación </p>
+            <p class="IG_3">2.5.2. Alcances de la resolución </p>
+            <p class="IG_3">2.5.3. Audiencia al contribuyente </p>
+            <p class="IG_3">2.5.4. Prueba y apreciación </p>
+            <p class="IG_2">2.6. Reclamo tributario </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_3">2.6.1. Lugar de presentación del reclamo </p>
+            <p class="IG_3">2.6.1.1. Expediente </p>
+            <p class="IG_3">2.6.1.2. Traslado </p>
+            <p class="IG_3">2.6.1.3. Notificaciones </p>
+            <p class="IG_3">2.6.1.4. Prueba </p>
+            <p class="IG_3">2.6.1.4.1. Características de este plazo </p>
+            <p class="IG_3">2.6.1.4.2. Resolución que ordena recibir la causa a prueba </p>
+            <p class="IG_3">2.6.1.4.3. Contenido del “Auto de Prueba” </p>
+            <p class="IG_3">2.6.1.4.4. Notificación del “Auto de Prueba” </p>
+            <p class="IG_3">2.6.1.4.5. Recurso que procede en contra del “Auto de Prueba” </p>
+            <p class="IG_3">2.6.1.4.6. Medios de prueba </p>
+            <p class="IG_3">2.6.1.4.7. Ampliación del probatorio </p>
+            <p class="IG_3">2.6.1.4.8. Observaciones a la prueba </p>
+            <p class="IG_3">2.6.1.4.9. Valor de la prueba </p>
+            <p class="IG_3">2.6.1.4.10. Prueba </p>
+            <p class="IG_2">2.7. Sentencia definitiva </p>
+            <p class="IG_3">2.7.1. Notificación de la sentencia </p>
+            <p class="IG_2">2.8. Recursos que proceden en contra de la sentencia definitiva pronunciada por el tribunal tributario
+            </p>
+            <p class="IG_3">2.8.1. Contra la sentencia </p>
+            <p class="IG_3">2.8.2. Recurso de aclaración, interpretación, rectificación o enmienda </p>
+            <p class="IG_2">2.9. Segunda instancia. Composición y competencia del tribunal de segunda instancia </p>
+            <p class="IG_3">2.9.1. Lugar de presentación del recurso de apelación </p>
+            <p class="IG_3">2.9.2. Vista de la causa </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_1">3. Procedimiento especial de reclamo por vulneración de derechos </p>
+            <p class="IG_2">3.1. Normativa vigente </p>
+            <p class="IG_2">3.2. Requisitos </p>
+            <p class="IG_3">3.2.1. Concurrencia de dos partes </p>
+            <p class="IG_3">3.2.1.1. Sujeto Activo </p>
+            <p class="IG_3">3.2.1.2. Sujeto pasivo </p>
+            <p class="IG_3">3.2.2. Que exista un acto u omisión arbitrario e ilegal que sea atribuible al Servicio </p>
+            <p class="IG_3">3.2.3. Tribunal Competente </p>
+            <p class="IG_3">3.2.4. Requisitos de la presentación </p>
+            <p class="IG_3">3.2.5. Plazo </p>
+            <p class="IG_3">3.2.6. Incompatibilidad de esta acción con el recurso de protección </p>
+            <p class="IG_2">3.3. Procedimiento </p>
+            <p class="IG_3">3.3.1. Admisibilidad </p>
+            <p class="IG_3">3.3.2. Traslado </p>
+            <p class="IG_3">3.3.3. Notificaciones </p>
+            <p class="IG_3">3.3.4. Prueba </p>
+            <p class="IG_3">3.3.4.1. Características de este plazo </p>
+            <p class="IG_3">3.3.4.2. Resolución que ordena recibir la causa a prueba </p>
+            <p class="IG_3">3.3.4.3. Contenido del “Auto de Prueba” </p>
+            <p class="IG_3">3.3.4.4. Notificación del “Auto de Prueba” </p>
+            <p class="IG_3">3.3.4.5. Recurso que procede en contra del “Auto de Prueba” </p>
+            <p class="IG_3">3.3.4.6. Medios de prueba </p>
+            <p class="IG_3">3.3.4.7. Ampliación del probatorio </p>
+            <p class="IG_3">3.3.4.8. Valor de la prueba </p>
+            <p class="IG_2">3.4. Sentencia definitiva </p>
+            <p class="IG_3">3.4.1. Notificación de la sentencia </p>
+            <p class="IG_2">3.5. Recurso </p>
+            <p class="IG_3">3.5.1. Recurso de aclaración, interpretación, rectificación o enmienda </p>
+            <p class="IG_3">3.5.2. Recurso de casación </p>
+            <p class="IG_5">Jurisprudencia </p>
+            <p class="IG_1">4. Procedimiento de determinación judicial del Impuesto de Timbres y Estampillas </p>
+            <p class="IG_2">4.1. Pago del impuesto </p>
+            <p class="IG_5">Jurisprudencia judicial </p>
+            <p class="IG_CapituloNumero">Capítulo XVI<br>Procedimiento ejecutivo de cobro de la obligación tributaria</p>
+            <p class="IG_1">1. Título ejecutivo </p>
+            <p class="IG_1">2. Preparación de la nómina de deudores morosos </p>
+            <p class="IG_1">3. Exclusión </p>
+            <p class="IG_1">4. Juez sustanciador </p>
+            <p class="IG_1">5. Embargo </p>
+            <p class="IG_1">6. Notificación al empleador </p>
+            <p class="IG_2">6.1. Destino de la retención </p>
+            <p class="IG_2">6.2. Incumplimiento del empleador </p>
+            <p class="IG_2">6.3. Comunicaciones a los deudores morosos </p>
+            <p class="IG_2">6.4. Convenios de pago </p>
+            <p class="IG_2">6.5. Condonación </p>
+            <p class="IG_3">6.5.1. Facultad especial del Presidente de la República </p>
+            <p class="IG_3">6.5.2. Efectos del convenio </p>
+            <p class="IG_3">6.5.3. Formalidades </p>
+            <p class="IG_2">6.6. Tramitación del juicio de cobro por obligaciones tributarias </p>
+            <p class="IG_3">6.6.1. Lugar y hora para realizar la notificación personal </p>
+            <p class="IG_3">6.6.2. Notificación por deuda territorial </p>
+            <p class="IG_3">6.6.3. Tratándose de otros tributos </p>
+            <p class="IG_3">6.6.4. Plazo para oponer excepciones </p>
+            <p class="IG_3">6.6.5. Embargo </p>
+            <p class="IG_3">6.6.6. Declaración Jurada </p>
+            <p class="IG_3">6.6.7. Procesos seguidos contra varios deudores </p>
+            <p class="IG_3">6.6.8. Formación del expediente </p>
+            <p class="IG_3">6.6.9. Oposición </p>
+            <p class="IG_3">6.6.10. Facultad de corregir errores manifiestos </p>
+            <p class="IG_3">6.6.11. Compensación </p>
+            <p class="IG_3">6.6.12. Suspensión de los apremios </p>
+            <p class="IG_3">6.6.13. Procedimiento aplicable para el caso que haya oposición </p>
+            <p class="IG_4">6.6.13.1. Limitación </p>
+            <p class="IG_4">6.6.13.2. Plazo </p>
+            <p class="IG_4">6.6.13.3. Remisión del expediente </p>
+            <p class="IG_3">6.6.14. Ejecución sin oposición </p>
+            <p class="IG_3">6.6.15. Gestiones del abogado Provincial del Servicio de Tesorerías </p>
+            <p class="IG_3">6.6.16. Derecho del ejecutado </p>
+            <p class="IG_4">6.6.16.1. Procedimiento </p>
+            <p class="IG_4">6.6.16.2. Prueba </p>
+            <p class="IG_4">6.6.16.3. Rendición de la prueba </p>
+            <p class="IG_4">6.6.16.4. Observaciones a la prueba </p>
+            <p class="IG_4">6.6.16.5. Citación para oír sentencia </p>
+            <p class="IG_4">6.6.16.6. Sentencia definitiva </p>
+            <p class="IG_5">6.6.16.6.1. Notificación </p>
+            <p class="IG_3">6.6.17. En caso que el ejecutado no oponga excepciones en Tribunal Civil </p>
+            <p class="IG_3">6.6.18. Subasta de inmuebles </p>
+            <p class="IG_3">6.6.19. Representación de Tesorería </p>
+            <p class="IG_3">6.6.20. Facultades del Abogado del Servicio de Tesorerías </p>
+            <p class="IG_3">6.6.21. Precio del remate </p>
+            <p class="IG_3">6.6.22. Incidentes </p>
+            <p class="IG_3">6.6.23. Parte en segunda instancia </p>
+            <p class="IG_2">6.7. Información para facilitar el cobro </p>
+            <p class="IG_2">6.8. Incobrabilidad de algunos créditos </p>
+            <p class="IG_CapituloNumero">Capítulo XVII<br>Procedimientos tributarios administrativos</p>
+            <p class="IG_1">1. Reposición administrativa </p>
+            <p class="IG_2">1.1. Interposición voluntaria </p>
+            <p class="IG_2">1.2. Plazos </p>
+            <p class="IG_2">1.3. Efectos de la presentación del recurso de reposición en el transcurso del plazo para reclamar
+                jurisdiccionalmente </p>
+            <p class="IG_2">1.4. Silencio administrativo </p>
+            <p class="IG_2">1.5. Especialidad de la reposición administrativa sobre una solicitud de revisión fundada en el artículo
+                6º letra B) Nº 5 del mismo cuerpo legal </p>
+            <p class="IG_2">1.6. Corrección oficiosa de vicios o errores manifiestos </p>
+            <p class="IG_2">1.7. Procedimiento </p>
+            <p class="IG_2">1.8. Formalidad de la presentación del recurso de reposición administrativo </p>
+            <p class="IG_3">1.8.1. Ingreso </p>
+            <p class="IG_3">1.8.2. Plazo </p>
+            <p class="IG_3">1.8.3. Presentación de documentos complementarios </p>
+            <p class="IG_3">1.8.4. Análisis de admisibilidad </p>
+            <p class="IG_3">1.8.5. Plazo para la determinación de la admisibilidad </p>
+            <p class="IG_3">1.8.6. Audiencia preliminar </p>
+            <p class="IG_3">1.8.7. Análisis de fondo </p>
+            <p class="IG_3">1.8.8. Informe de otras áreas </p>
+            <p class="IG_3">1.8.9. Audiencia de cierre </p>
+            <p class="IG_3">1.8.10. Resolución </p>
+            <p class="IG_3">1.8.11. Impugnación de la resolución que falla el recurso </p>
+            <p class="IG_2">1.9. Retroalimentación </p>
+            <p class="IG_2">1.10. Control de la Gestión </p>
+            <p class="IG_2">1.11. Control del proceso </p>
+            <p class="IG_1">2. Revisión de la actuación fiscalizadora </p>
+            <p class="IG_2">2.1. Vicios o errores susceptibles de las actuaciones de fiscalización desarrolladas por el Servicio que
+                pueden ser denunciados a través de este procedimiento </p>
+            <p class="IG_2">2.2. Procedimiento </p>
+            <p class="IG_2">2.3. Plazo </p>
+            <p class="IG_2">2.4. Análisis de admisibilidad </p>
+            <p class="IG_2">2.5. Análisis de fondo </p>
+            <p class="IG_2">2.6. Resolución </p>
+            <p class="IG_3">2.6.1. El Jefe del Departamento u Oficina Jurídica podrá resolver que </p>
+            <p class="IG_3">2.6.2. Contenido de la Resolución </p>
+            <p class="IG_1">3. RAF aplicada al reclamo del avalúo fiscal, fijado en los avalúos establecidos en la tasación general
+                agrícola, a través del formulario Nº 2827 </p>
+            <p class="IG_2">3.1. Sujeto de la solicitud de impugnación del avalúo fijado en el reavalúo agrícola </p>
+            <p class="IG_2">3.2. Comparecencia </p>
+            <p class="IG_2">3.3. Formulario 2827 </p>
+            <p class="IG_2">3.4. Lugar de presentación </p>
+            <p class="IG_2">3.5. Plazo de presentación </p>
+            <p class="IG_2">3.6. Fundamentos </p>
+            <p class="IG_2">3.7. Tramitación </p>
+            <p class="IG_2">3.8. Silencio administrativo </p>
+            <p class="IG_2">3.9. Informe técnico </p>
+            <p class="IG_1">4. RAF aplicada al proceso de reavalúo de bienes raíces no agrícolas correspondientes a sitios no
+                edificados, propiedades abandonadas y pozos lastreros ubicados en zonas urbanas </p>
+            <p class="IG_2">4.1. Antecedentes </p>
+            <p class="IG_2">4.2. Sujetos de la impugnación </p>
+            <p class="IG_2">4.3. Comparecencia </p>
+            <p class="IG_2">4.4. Formulario Nº 2835 </p>
+            <p class="IG_2">4.5. Lugar de presentación </p>
+            <p class="IG_2">4.6. Plazo de presentación </p>
+            <p class="IG_2">4.7. Fundamentos de la solicitud </p>
+            <p class="IG_2">4.8. Tramitación </p>
+            <p class="IG_3">4.8.1. Silencio administrativo </p>
+            <p class="IG_3">4.8.2. Informe Técnico </p>
+            <p class="IG_1">5. Procedimiento de reclamo de Impuesto a las Asignaciones por causa de muerte y donaciones </p>
+            <p class="IG_2">5.1. Lugar de apertura de la sucesión </p>
+            <p class="IG_2">5.2. Clase de sucesión </p>
+            <p class="IG_2">5.3. Procedimiento de determinación y pago del Impuesto a las Asignaciones y Donaciones </p>
+            <p class="IG_3">5.3.1. Alcance de la obligación de declarar y pagar el impuesto </p>
+            <p class="IG_3">5.3.2. Instrucciones sobre determinación del Impuesto </p>
+            <p class="IG_4">5.3.2.1. Impuesto a las Asignaciones Hereditarias </p>
+            <p class="IG_2">a. Causante </p>
+            <p class="IG_2">b. Asignatarios </p>
+            <p class="IG_2">c. Derechos </p>
+            <p class="IG_2">d. Bienes del causante </p>
+            <p class="IG_3">d.1. Inventario </p>
+            <p class="IG_4">d.1.1. Bienes raíces Agrícolas y No Agrícolas </p>
+            <p class="IG_4">d.1.2. Bienes excluidos del avalúo de predio agrícola </p>
+            <p class="IG_4">d.1.3. Muebles </p>
+            <p class="IG_4">d.1.4. Efectos Públicos, acciones y valores mobiliarios </p>
+            <p class="IG_4">d.1.5. Depósitos, Créditos y Fondos Previsionales </p>
+            <p class="IG_4">d.1.6. Vehículos </p>
+            <p class="IG_4">d.1.7. Negocios o empresas unipersonales, o cuotas en comunidades dueñas de negocios, o empresas, o
+                derechos en sociedades de personas </p>
+            <p class="IG_4">d.1.8. Deudas </p>
+            <p class="IG_3">d.2. Valorización </p>
+            <p class="IG_4">d.2.1. Valor de bienes raíces agrícolas y no agrícolas </p>
+            <p class="IG_4">d.2.2. Bienes excluidos del avalúo de predio agrícola </p>
+            <p class="IG_4">d.2.3. Bienes muebles </p>
+            <p class="IG_4">d.2.4. Menaje </p>
+            <p class="IG_4">d.2.5. Efectos públicos, acciones y valores mobiliarios </p>
+            <p class="IG_4">d.2.6. Depósitos, Créditos y Fondos Previsionales </p>
+            <p class="IG_4">d.2.7. Vehículos </p>
+            <p class="IG_4">d.2.8. Negocios o empresas unipersonales, o cuotas en comunidades dueñas de negocios, o empresas, o
+                derechos en sociedades de personas </p>
+            <p class="IG_4">d.2.9. Deudas </p>
+            <p class="IG_3">e. Procedimiento de determinación del valor de la masa hereditaria </p>
+            <p class="IG_4">e.1. Valor de los bienes del causante </p>
+            <p class="IG_4">e.2. Asignaciones de especie </p>
+            <p class="IG_4">e.3. Rebajas a la herencia </p>
+            <p class="IG_4">e.4. Valores exentos de impuesto </p>
+            <p class="IG_3">f. Determinación de las asignaciones líquidas </p>
+            <p class="IG_4">f.1. Valor de cada asignación </p>
+            <p class="IG_3">g. Gravámenes </p>
+            <p class="IG_3">h. Donaciones anteriores </p>
+            <p class="IG_3">i. Procedimiento de determinación de la Base Imponible del Impuesto </p>
+            <p class="IG_4">i.1. Monto Exento </p>
+            <p class="IG_4">i.2. Tasa </p>
+            <p class="IG_4">i.3. Recargo </p>
+            <p class="IG_4">i.4. Rebaja </p>
+            <p class="IG_3">j. Declaración y pago del Impuesto a las Asignaciones Hereditarias, Infracciones y Prescripción </p>
+            <p class="IG_4">j.1. Normativa aplicable </p>
+            <p class="IG_4">j.2. Declaración y pago del impuesto </p>
+            <p class="IG_5">j.2.1. Asignatarios obligados a declarar y pagar el impuesto </p>
+            <p class="IG_5">j.2.2. Forma de declarar y pagar el impuesto </p>
+            <p class="IG_5">j.2.3. Plazo para declarar y pagar el impuesto </p>
+            <p class="IG_5">j.2.4. Lugar en que se debe presentar la declaración </p>
+            <p class="IG_5">j.2.5. Pago del impuesto fuera de plazo </p>
+            <p class="IG_5">j.2.6. Forma de acreditar el pago del impuesto o su exención </p>
+            <p class="IG_3">k. Infracciones y sanciones </p>
+            <p class="IG_4">k.1. Declaración con errores u omisiones </p>
+            <p class="IG_4">k.2. El retardo u omisión de la declaración del impuesto </p>
+            <p class="IG_4">k.3. Declaraciones maliciosamente incompletas o falsas </p>
+            <p class="IG_4">k.4. Omisión maliciosa de la declaración </p>
+            <p class="IG_3">l. Prescripción del impuesto de la Ley Nº 16.271 y facultades del SII </p>
+            <p class="IG_4">l.1. Plazo de prescripción </p>
+            <p class="IG_5">l.1.1. Plazo de tres años </p>
+            <p class="IG_5">l.1.2. Plazo de seis años </p>
+            <p class="IG_5">l.1.3. Limitación de la facultad de tasar dentro del plazo del artículo 200 del Código Tributario </p>
+            <p class="IG_5">l.1.4. Efectos de la prescripción </p>
+            <p class="IG_5">l.1.5. Facultades del Servicio </p>
+            <p class="IG_5">l.1.6. Solicitud administrativa de declaración de la prescripción </p>
+            <p class="IG_4">5.3.2.2. Impuesto a las Donaciones </p>
+            <p class="IG_2">a. Antecedentes necesarios para la determinación del Impuesto a las Donaciones </p>
+            <p class="IG_2">b. Bienes o bienes donados </p>
+            <p class="IG_2">c. Determinación del valor afecto a impuesto </p>
+            <p class="IG_3">c.1. Exenciones de impuesto </p>
+            <p class="IG_3">c.2. Gravámenes </p>
+            <p class="IG_3">c.3. Donaciones anteriores </p>
+            <p class="IG_2">d. Determinación de la Base Imponible del Impuesto </p>
+            <p class="IG_3">d.1. Monto exento </p>
+            <p class="IG_2">e. Aplicación de la tasa </p>
+            <p class="IG_3">e.1. Tasa </p>
+            <p class="IG_3">e.2. Recargo </p>
+            <p class="IG_3">e.3. Rebaja </p>
+            <p class="IG_1">6. Declaración y pago del impuesto </p>
+            <p class="IG_2">6.1. Obligado a declarar y pagar el impuesto </p>
+            <p class="IG_2">6.2. Forma de declarar y pagar el impuesto </p>
+            <p class="IG_2">6.3. Plazo para declarar y pagar el impuesto </p>
+            <p class="IG_2">6.4. Lugar en que se debe presentar la declaración </p>
+            <p class="IG_2">6.5. Pago del impuesto fuera de plazo </p>
+            <p class="IG_3">6.5.1. El reajuste del impuesto adeudado </p>
+            <p class="IG_3">6.5.2. Los intereses por la mora en el pago del impuesto </p>
+            <p class="IG_2">6.6. Forma de acreditar el pago del impuesto o su exención </p>
+            <p class="IG_3">6.6.1. Donación exenta </p>
+            <p class="IG_3">6.6.2. Donación afecta </p>
+            <p class="IG_1">7. Infracciones y sanciones </p>
+            <p class="IG_2">7.1. Declaración con errores u omisiones </p>
+            <p class="IG_2">7.2. El retardo u omisión de la declaración del impuesto </p>
+            <p class="IG_2">7.3. Declaraciones maliciosamente incompletas o falsas </p>
+            <p class="IG_2">7.4. Omisión de la declaración de impuesto exento </p>
+            <p class="IG_1">8. Prescripción del Impuesto de la Ley Nº 16.271 a las Donaciones y facultades del SII </p>
+            <p class="IG_CapituloNumero">Capítulo XVIII<br>Procedimiento penal tributario</p>
+            <p class="IG_1">1. Recopilación de Antecedentes </p>
+            <p class="IG_2">1.1. Procedimiento al interior del Servicio </p>
+            <p class="IG_2">1.2. Colaboración pericial al Ministerio Público </p>
+            <p class="IG_1">2. Ejercicio de la acción penal </p>
+            <p class="IG_2">2.1. Querella </p>
+            <p class="IG_3">2.1.1. Oportunidad para querellarse </p>
+            <p class="IG_2">2.2. Denuncia </p>
+            <p class="IG_3">2.2.1. Forma y contenido de la denuncia </p>
+            <p class="IG_1">3. Alternativas que tiene el Fiscal durante la investigación </p>
+            <p class="IG_2">3.1. Archivo provisional </p>
+            <p class="IG_3">3.1.1. Requisitos </p>
+            <p class="IG_3">3.1.2. Facultades del Servicio </p>
+            <p class="IG_2">3.2. Facultad para no iniciar investigación </p>
+            <p class="IG_3">3.2.1. Requisitos </p>
+            <p class="IG_3">3.2.2. Control judicial </p>
+            <p class="IG_2">3.3. Los fiscales del Ministerio Público pueden decidir no iniciar la persecución penal o abandonar la
+                ya iniciada </p>
+            <p class="IG_3">3.3.1. Requisitos </p>
+            <p class="IG_3">3.3.2. Derechos de los intervinientes </p>
+            <p class="IG_3">3.3.3. Derecho del juez de garantía </p>
+            <p class="IG_3">3.3.4. Derecho de la víctima </p>
+            <p class="IG_1">4. Investigación </p>
+            <p class="IG_2">4.1. Diligencias investigativas </p>
+            <p class="IG_2">4.2. Proposición de diligencias </p>
+            <p class="IG_2">4.3. Secreto de la investigación para los terceros </p>
+            <p class="IG_2">4.4. Derecho del imputado y de los demás intervinientes </p>
+            <p class="IG_3">4.4.1. Examinar </p>
+            <p class="IG_3">4.4.2. Término al secreto </p>
+            <p class="IG_2">4.5. Derechos del imputado durante la investigación </p>
+            <p class="IG_2">4.6. Obligaciones del imputado </p>
+            <p class="IG_1">5. Formalización de la investigación </p>
+            <p class="IG_2">5.1. Oportunidad </p>
+            <p class="IG_2">5.2. Audiencia de formalización </p>
+            <p class="IG_2">5.3. Efectos de la formalización de la investigación </p>
+            <p class="IG_2">5.4. Plazo para el cierre de la investigación </p>
+            <p class="IG_1">6. Juicio inmediato </p>
+            <p class="IG_1">7. Salidas alternativas </p>
+            <p class="IG_2">7.1. Suspensión condicional del procedimiento </p>
+            <p class="IG_3">7.1.1. Requisitos </p>
+            <p class="IG_3">7.1.2. Condiciones a las que queda sujeto el imputado </p>
+            <p class="IG_3">7.1.3. Revocación de la suspensión condicional </p>
+            <p class="IG_3">7.1.4. Efectos de la suspensión condicional del procedimiento </p>
+            <p class="IG_3">7.1.5. Oportunidad para pedir y decretar la suspensión condicional del procedimiento </p>
+            <p class="IG_1">8. Acuerdos reparatorios </p>
+            <p class="IG_2">8.1. Efectos penales del acuerdo reparatorio </p>
+            <p class="IG_2">8.2. Efectos civiles del acuerdo reparatorio </p>
+            <p class="IG_2">8.3. Oportunidad para pedir y decretar los acuerdos reparatorios </p>
+            <p class="IG_2">8.4. Condición especial en los delitos tributarios </p>
+            <p class="IG_1">9. Conclusión de la investigación </p>
+            <p class="IG_2">9.1. Audiencia </p>
+            <p class="IG_3">9.1.1. Sobreseimiento definitivo </p>
+            <p class="IG_3">9.1.2. Sobreseimiento temporal </p>
+            <p class="IG_4">9.1.2.1. Reapertura del procedimiento al cesar la causal de sobreseimiento temporal </p>
+            <p class="IG_3">9.1.3. Facultades del juez respecto del sobreseimiento </p>
+            <p class="IG_1">10. Reapertura de la investigación </p>
+            <p class="IG_1">11. Forzamiento de la acusación </p>
+            <p class="IG_1">12. Acusación </p>
+            <p class="IG_2">12.1. Oportunidad para acusar </p>
+            <p class="IG_1">13. Audiencia de preparación de juicio oral </p>
+            <p class="IG_2">13.1. Plazo de notificación </p>
+            <p class="IG_2">13.2. Facultades del acusado </p>
+            <p class="IG_2">13.3. Excepciones de previo y especial pronunciamiento </p>
+            <p class="IG_2">13.4. Excepciones en el juicio oral </p>
+            <p class="IG_2">13.5. Desarrollo de la audiencia de preparación del juicio oral </p>
+            <p class="IG_2">13.6. Conciliación sobre la responsabilidad civil en la audiencia de preparación del juicio oral </p>
+            <p class="IG_2">13.7. Convenciones probatorias </p>
+            <p class="IG_2">13.8. Exclusiones probatorias </p>
+            <p class="IG_2">13.9. Prueba anticipada </p>
+            <p class="IG_1">14. Auto de apertura del juicio oral </p>
+            <p class="IG_1">15. Audiencia de juicio oral </p>
+            <p class="IG_2">15.1. Ausencia del querellante o de su apoderado en el juicio oral </p>
+            <p class="IG_2">15.2. Incidentes en la audiencia del juicio oral </p>
+            <p class="IG_2">15.3. Prueba </p>
+            <p class="IG_3">15.3.1. Libertad de prueba </p>
+            <p class="IG_3">15.3.2. Oportunidad para la recepción de la prueba </p>
+            <p class="IG_3">15.3.3. Valoración de la prueba </p>
+            <p class="IG_3">15.3.4. Prueba de las acciones civiles </p>
+            <p class="IG_2">15.4. Desarrollo del juicio oral </p>
+            <p class="IG_3">15.4.1. Defensa y declaración del acusado </p>
+            <p class="IG_3">15.4.2. Orden de recepción de las pruebas en la audiencia del juicio oral </p>
+            <p class="IG_1">16. Sentencia definitiva </p>
+            <p class="IG_2">16.1. Contenido de la sentencia </p>
+            <p class="IG_2">16.2. Decisión sobre absolución o condena </p>
+            <p class="IG_2">16.3. Plazo para redacción de la sentencia </p>
+            <p class="IG_2">16.4. Determinación de la pena </p>
+            <p class="IG_2">16.5. Audiencia de lectura de sentencia </p>
+            <p class="IG_2">16.6. Sentencia absolutoria y medidas cautelares personales </p>
+            <p class="IG_2">16.7. Sentencia condenatoria </p>
+
+        </div>
+    </section>
+
+
+    <section id="salto" ><!-- ABSTRACT TOMO I - INICIO -->
+        <div id="abstract"> 
+            <p class="IG_CapituloNumero">Capítulo 1</p>
+            <p class="IG_Capitulo">Potestad tributaria</p>
+            <p class="IG_1">1. Concepto</p>
+            <p class="IG_Texto">Es usual en la doctrina italiana denominar potestad tributaria al poder tributario. De hecho,
+                Berliri la define como el “poder de instituir impuestos o establecer prohibiciones de naturaleza fiscal”, es decir,
+                el poder de dictar normas jurídicas de las que nace, o puede nacer, a cargo de determinados individuos o de
+                determinadas categorías de individuos, la obligación de pagar un impuesto o de respetar un límite tributario.</p>
+            <p class="IG_Texto">Este poder, en cuanto potestad jurídica, engloba, según Berliri, tanto el poder legislativo como al
+                poder reglamentario, ya que toda la normativa de un tributo deriva de la potestad tributaria.</p>
+            <p class="IG_Texto">En otras palabras, conforme dice Berliri, la exteriorización del poder tributario implica que
+                existan normas tributarias de distinta naturaleza –legal y administrativa–.</p>
+            <p class="IG_Texto">Aunque coincidimos con Berliri, en cuanto a que existen normas referidas a lo tributario que tienen
+                origen administrativo, consideramos que el poder tributario, como tal, debe reservarse para identificar aquella
+                facultad que tiene el Estado para imponer, modificar o suprimir tributos.</p>
+            <p class="IG_Texto">Dado que esta facultad, que nace por el poder de imperio que se reconoce al Estado, se expresa sólo
+                en normas de rango legal, conceptualizamos el poder tributario como la facultad que el ordenamiento jurídico le
+                reconoce al Estado para en virtud de una ley, imponer, modificar o suprimir obligaciones tributarias.</p>
+            <p class="IG_Texto">Afirmamos que el poder tributario nace por el imperio que el ordenamiento jurídico le reconoce al
+                Estado, y que para ejercer este poder, se requiere que exista capacidad contributiva (riqueza, que reconozca su
+                presencia, fuente, percepción o devengamiento en Chile o una actividad que haya sido ejecutada en el país
+                independientemente del lugar que se utilizó, o un servicio que fue prestado en el exterior, pero utilizado en
+                Chile).</p>
+            <p class="IG_Texto">Reconocemos que este poder se expresa en leyes, y se aplica o debe aplicarse con estricta sujeción
+                al Derecho.</p>
+        </div>
+    </section><!-- ABSTRACT TOMO I - FIN -->
+    <section >
+        <div class="continuar">
+            <div>
+                <span class="TextoB">Para más información:</span><br><a href="http://www.thomsonreuters.cl/PortalLN/carro_new/nw_Home.asp?tm=2">http://www.thomsonreuters.cl<a>
+            </div>
+        </div>
+        <div class="continuar">
+            <div>
+                <p class="contacto">Venta de libros</p>
+                <p>22-5105000</p>
+                <p>opción 3 / opción 4</p>
+                <p>+56 9 5864 3042</p>
+                <p><a href="mailto:isabel.gonzalez@thomsonreuters.com">isabel.gonzalez@thomsonreuters.com</a> </p>
+            
+            </div>
+            <div>
+                <p class="contacto">Activación/Reenvío</p>
+                <p>Clave de Proview</p>
+                <p>(Libro electrónico)</p>
+                <p>22-5105000 opción 0</p>
+            
+            </div>
+            <div>
+                <p class="contacto">Solicitud</p>
+                <p>Estado de envío y orden de transporte</p>
+                <p>22-5105000 opción 0</p>
+            
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var coll = document.getElementsByClassName("colapsable");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+<footer>
+    <a href="http://www.thomsonreuters.cl/PortalLN/carro_new/nw_Home.asp?tm=2" target="_blank"><img src="http://images.engage.es-pt.thomsonreuters.com/EloquaImages/clients/LALEYSAEIMPRESORA/%7B3fcf9c31-2f5b-4efb-995b-465ec2a7ec2a%7D_logoTRanswer_color.png" alt="Thomson Reuters"></a>
+</footer>
+</html>
